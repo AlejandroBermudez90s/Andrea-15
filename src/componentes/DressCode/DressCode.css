@@ -1,0 +1,302 @@
+/* Cards de dress code */
+.dresscode-card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Card de Color Reservado - DESTACADA */
+.reserved-color-card {
+    background: linear-gradient(135deg, #e6e8ff 0%, #b3b4ff 100%);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.reserved-color-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(4, 0, 255, 0.1), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 38, 255, 0.3), 0 0 40px rgba(0, 38, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 38, 255, 0.5), 0 0 60px rgba(0, 38, 255, 0.2);
+    }
+}
+
+.reserved-icon-wrapper {
+    font-size: 3.5rem;
+    color: #0f0bf5;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.reserved-color-card h3 {
+    color: #1b1988;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reserved-color-card .lead {
+    color: #0e1092;
+    font-size: 1.1rem;
+}
+
+/* Muestra del color */
+.color-display-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-sample {
+    width: 200px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 4px solid #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.color-sample:hover {
+    transform: scale(1.05);
+}
+
+.color-sample::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.color-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.reserved-color-card .alert-warning {
+    background-color: rgba(11, 34, 245, 0.2);
+    color: #0e1792;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+}
+
+.alert-card-wrapper {
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cards de dress code */
+.dresscode-card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.dresscode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Wrapper del icono */
+.dresscode-icon-wrapper {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ilustraciones SVG */
+.dress-illustration,
+.suit-illustration {
+    width: 140px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.dress-svg,
+.suit-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.dresscode-card:hover .dress-svg,
+.dresscode-card:hover .suit-svg {
+    transform: scale(1.05);
+}
+
+/* Icono decorativo de fondo */
+.dresscode-icon {
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.dresscode-icon.women {
+    color: #C084FC;
+}
+
+.dresscode-icon.men {
+    color: #3B82F6;
+}
+
+/* Card de normas */
+.dresscode-rules-card {
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+/* Secciones de normas */
+.rules-section {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.women-section {
+    border-left: 4px solid #C084FC;
+}
+
+.men-section {
+    border-left: 4px solid #3B82F6;
+}
+
+/* Lista de normas */
+.list-group-item {
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+    padding-left: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+.list-group-item i {
+    font-size: 1.1rem;
+}
+
+/* Alert personalizado */
+.alert-info {
+    border-radius: 10px;
+}
+
+/* Badges */
+.badge.rounded-pill {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dresscode-icon-wrapper {
+        height: 180px;
+    }
+    
+    .dress-illustration,
+    .suit-illustration {
+        width: 120px;
+    }
+    
+    .dresscode-icon {
+        font-size: 6rem;
+    }
+    
+    .rules-section {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .dresscode-icon-wrapper {
+        height: 160px;
+    }
+    
+    .dress-illustration,
+    .suit-illustration {
+        width: 100px;
+    }
+    
+    .list-group-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animaciones */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.dresscode-card:hover .dress-illustration,
+.dresscode-card:hover .suit-illustration {
+    animation: float 2s ease-in-out infinite;
+}

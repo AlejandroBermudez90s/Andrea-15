@@ -1,0 +1,52 @@
+/* Estilos personalizados para el acordeón */
+
+/* Card del acordeón */
+.accordion-item {
+    border-radius: 12px !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Botón del acordeón */
+.accordion-button {
+    font-size: 1.1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e9ecef;
+    color: #495057;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-button:hover {
+    background-color: #e9ecef;
+}
+
+/* Cuerpo del acordeón */
+.accordion-body {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+}
+
+/* Animación suave al expandir */
+.accordion-collapse {
+    transition: height 0.4s ease;
+}
+
+/* Iconos Bootstrap Icons - opcional */
+.bi {
+    font-size: 1.2rem;
+}
