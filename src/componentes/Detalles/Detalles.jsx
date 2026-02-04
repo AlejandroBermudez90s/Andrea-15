@@ -2,6 +2,7 @@ import CuentaAtras from "../CuentaAtras/CuentaAtras"
 import Ubicacion from "../Ubicacion/Ubicacion"
 import './Detalles.css'
 import DressCode from "../DressCode/DressCode"
+import ConfirmarAsistencia from "../ConfirmarAsistencia/ConfirmarAsistencia"
 
 const Detalles = () => {
     return (
@@ -13,24 +14,24 @@ const Detalles = () => {
                         <div className="text-center mb-5 section-header">
                             <div className="decorative-line mb-3"></div>
                             <h2 className="display-4 fw-bold text-white mb-3 fuente">
-                                Detalles de la Celebración
+                                Detalles de la celebración
                             </h2>
                             <p className="lead text-white-50 mb-4 fuenteParrafo">
                                 Todo lo que necesitas saber para este día tan especial
                             </p>
                             <div className="decorative-line"></div>
                         </div>
-                        
+
                         <div className="accordion accordion-custom" id="accordionDetalles">
                             {/* Cuenta Atrás */}
                             <div className="accordion-item mb-4">
                                 <h2 className="accordion-header">
-                                    <button 
-                                        className="accordion-button collapsed" 
-                                        type="button" 
-                                        data-bs-toggle="collapse" 
+                                    <button
+                                        className="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#collapseCuenta"
-                                        aria-expanded="false" 
+                                        aria-expanded="false"
                                         aria-controls="collapseCuenta"
                                     >
                                         <div className="accordion-icon-wrapper me-3">
@@ -39,9 +40,9 @@ const Detalles = () => {
                                         <span className="accordion-title">Fecha y hora</span>
                                     </button>
                                 </h2>
-                                <div 
-                                    id="collapseCuenta" 
-                                    className="accordion-collapse collapse" 
+                                <div
+                                    id="collapseCuenta"
+                                    className="accordion-collapse collapse"
                                     data-bs-parent="#accordionDetalles"
                                 >
                                     <div className="accordion-body">
@@ -53,12 +54,12 @@ const Detalles = () => {
                             {/* Ubicación */}
                             <div className="accordion-item mb-4">
                                 <h2 className="accordion-header">
-                                    <button 
-                                        className="accordion-button collapsed" 
-                                        type="button" 
-                                        data-bs-toggle="collapse" 
+                                    <button
+                                        className="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#collapseUbicacion"
-                                        aria-expanded="false" 
+                                        aria-expanded="false"
                                         aria-controls="collapseUbicacion"
                                     >
                                         <div className="accordion-icon-wrapper me-3">
@@ -67,9 +68,9 @@ const Detalles = () => {
                                         <span className="accordion-title">Ubicación</span>
                                     </button>
                                 </h2>
-                                <div 
-                                    id="collapseUbicacion" 
-                                    className="accordion-collapse collapse" 
+                                <div
+                                    id="collapseUbicacion"
+                                    className="accordion-collapse collapse"
                                     data-bs-parent="#accordionDetalles"
                                 >
                                     <div className="accordion-body">
@@ -81,12 +82,12 @@ const Detalles = () => {
                             {/* Código de Vestimenta */}
                             <div className="accordion-item mb-4">
                                 <h2 className="accordion-header">
-                                    <button 
-                                        className="accordion-button collapsed" 
-                                        type="button" 
-                                        data-bs-toggle="collapse" 
+                                    <button
+                                        className="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#collapseCodigo"
-                                        aria-expanded="false" 
+                                        aria-expanded="false"
                                         aria-controls="collapseCodigo"
                                     >
                                         <div className="accordion-icon-wrapper me-3">
@@ -95,13 +96,40 @@ const Detalles = () => {
                                         <span className="accordion-title">Dress code</span>
                                     </button>
                                 </h2>
-                                <div 
-                                    id="collapseCodigo" 
-                                    className="accordion-collapse collapse" 
+                                <div
+                                    id="collapseCodigo"
+                                    className="accordion-collapse collapse"
                                     data-bs-parent="#accordionDetalles"
                                 >
                                     <div className="accordion-body">
                                         <DressCode />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="accordion-item mb-4">
+                                <h2 className="accordion-header">
+                                    <button
+                                        className="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseConfirmar"
+                                        aria-expanded="false"
+                                        aria-controls="collapseConfirmar"
+                                    >
+                                        <div className="accordion-icon-wrapper me-3">
+                                            <i className="bi bi-check-circle-fill"></i>
+                                        </div>
+                                        <span className="accordion-title">Confirmar asistencia</span>
+                                    </button>
+                                </h2>
+
+                                <div
+                                    id="collapseConfirmar"
+                                    className="accordion-collapse collapse"
+                                    data-bs-parent="#accordionDetalles"
+                                >
+                                    <div className="accordion-body">
+                                        <ConfirmarAsistencia />
                                     </div>
                                 </div>
                             </div>
