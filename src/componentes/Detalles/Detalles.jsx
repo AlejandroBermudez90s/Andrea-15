@@ -12,10 +12,10 @@ const Detalles = () => {
                         {/* Título principal mejorado */}
                         <div className="text-center mb-5 section-header">
                             <div className="decorative-line mb-3"></div>
-                            <h2 className="display-4 fw-bold text-white mb-3">
+                            <h2 className="display-4 fw-bold text-white mb-3 fuente">
                                 Detalles de la Celebración
                             </h2>
-                            <p className="lead text-white-50 mb-4">
+                            <p className="lead text-white-50 mb-4 fuenteParrafo">
                                 Todo lo que necesitas saber para este día tan especial
                             </p>
                             <div className="decorative-line"></div>

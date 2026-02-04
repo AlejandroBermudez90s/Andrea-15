@@ -1,13 +1,35 @@
 /* ============================================
    SECCIÓN DE DETALLES – AZUL CLARO ELEGANTE
    ============================================ */
+.fuente {
+    font-family: "Prata", serif;
+    color: #e0e0e0;
+    text-align: center;
+    line-height: 2;
+    /* Mucho espacio entre líneas = más lujo */
+    letter-spacing: 1.5px;
+    /* Separa un poco las letras */
+    text-transform: none;
+    /* Mantén minúsculas para que sea más joven */
+}
+
+.fuenteParrafo {
+    font-family: "Prata", serif;
+    color: #f3f1f1;
+    text-align: center;
+    line-height: 2;
+    /* Mucho espacio entre líneas = más lujo */
+    letter-spacing: 1.5px;
+    /* Separa un poco las letras */
+    text-transform: none;
+    /* Mantén minúsculas para que sea más joven */
+}
 
 .detalles-section {
     background: linear-gradient(180deg,
-        #0b306d 0%,
-        #081033 50%,
-        #264c79 100%
-    );
+            #0b306d 0%,
+            #081033 50%,
+            #264c79 100%);
     min-height: 100vh;
     position: relative;
 }

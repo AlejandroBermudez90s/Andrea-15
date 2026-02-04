@@ -4,10 +4,10 @@ const Cabecera = () => {
 
 	return (
 		<div>
-			<h1 className="display-1 fw-bold titulo">ANDREA</h1>
-			<h3 className="lead fst-italic">XV AÑOS</h3>
+			<h1 className="andrea">Andrea</h1>
+			<h2 className="andrea2">XV Años</h2>
 
-			<a href="#detalles" className="btn btn-outline-light btn-lg mt-4 px-5 shadow-sm">
+			<a href="#detalles" className="btn btn-outline-light btn-sm mt-4 px-5 shadow-sm">
 				Ver detalles
 			</a>
 		</div>
