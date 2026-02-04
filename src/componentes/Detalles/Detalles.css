@@ -1,52 +1,267 @@
-/* Estilos personalizados para el acordeón */
+/* ============================================
+   SECCIÓN DE DETALLES - TEMA AZUL OSCURO
+   ============================================ */
 
-/* Card del acordeón */
-.accordion-item {
-    border-radius: 12px !important;
+/* Fondo degradado azul oscuro elegante */
+.detalles-section {
+    background: linear-gradient(180deg, 
+        #0f172a 0%,      /* Azul muy oscuro */
+        #1e293b 50%,     /* Azul oscuro medio */
+        #0f172a 100%     /* Azul muy oscuro */
+    );
+    min-height: 100vh;
+    position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
 }
 
-.accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+/* Efecto de partículas/estrellas de fondo */
+.detalles-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 90% 60%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 33% 80%, rgba(255, 255, 255, 0.3), transparent);
+    background-size: 200% 200%;
+    animation: twinkle 10s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Header de la sección */
+.section-header {
+    position: relative;
+    z-index: 1;
+}
+
+/* Líneas decorativas */
+.decorative-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #60a5fa, 
+        transparent
+    );
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+/* Título principal */
+.section-header h2 {
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   ESTILOS DEL ACORDEÓN
+   ============================================ */
+
+/* Accordion item - Card individual */
+.accordion-custom .accordion-item {
+    background: linear-gradient(135deg, 
+        rgba(30, 41, 59, 0.95) 0%,
+        rgba(15, 23, 42, 0.95) 100%
+    );
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 16px !important;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.accordion-custom .accordion-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(96, 165, 250, 0.5);
+    box-shadow: 0 8px 30px rgba(96, 165, 250, 0.2);
 }
 
 /* Botón del acordeón */
-.accordion-button {
-    font-size: 1.1rem;
-    padding: 1.25rem 1.5rem;
-    background-color: #f8f9fa;
-    transition: all 0.3s ease;
+.accordion-custom .accordion-button {
+    background: transparent;
+    color: #e2e8f0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1.5rem 1.75rem;
+    border: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.accordion-button:not(.collapsed) {
-    background-color: #e9ecef;
-    color: #495057;
+/* Efecto de brillo al pasar el mouse */
+.accordion-custom .accordion-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(96, 165, 250, 0.1), 
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.accordion-custom .accordion-button:hover::before {
+    left: 100%;
+}
+
+/* Estado no colapsado (abierto) */
+.accordion-custom .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, 
+        rgba(59, 130, 246, 0.2) 0%,
+        rgba(37, 99, 235, 0.2) 100%
+    );
+    color: #93c5fd;
     box-shadow: none;
+    border-bottom: 2px solid rgba(96, 165, 250, 0.3);
 }
 
-.accordion-button:focus {
-    box-shadow: none;
-    border-color: transparent;
+/* Eliminar foco outline por defecto */
+.accordion-custom .accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    border-color: rgba(96, 165, 250, 0.5);
 }
 
-.accordion-button:hover {
-    background-color: #e9ecef;
+/* Icono del acordeón (flecha) */
+.accordion-custom .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2360a5fa'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 0 3px rgba(96, 165, 250, 0.5));
 }
 
-/* Cuerpo del acordeón */
-.accordion-body {
-    padding: 2rem 1.5rem;
-    background-color: #ffffff;
+.accordion-custom .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+    filter: drop-shadow(0 0 5px rgba(147, 197, 253, 0.7));
 }
 
-/* Animación suave al expandir */
-.accordion-collapse {
-    transition: height 0.4s ease;
+/* Wrapper del icono personalizado */
+.accordion-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    transition: all 0.4s ease;
 }
 
-/* Iconos Bootstrap Icons - opcional */
-.bi {
-    font-size: 1.2rem;
+.accordion-button:hover .accordion-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+}
+
+.accordion-button:not(.collapsed) .accordion-icon-wrapper {
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    box-shadow: 0 6px 15px rgba(96, 165, 250, 0.5);
+}
+
+.accordion-icon-wrapper i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+/* Título del acordeón */
+.accordion-title {
+    letter-spacing: 0.5px;
+}
+
+/* Cuerpo del acordeón - ANIMACIÓN SUAVE */
+.accordion-custom .accordion-collapse {
+    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.accordion-custom .accordion-body {
+    padding: 2rem 1.75rem;
+    background: rgba(15, 23, 42, 0.5);
+    color: #e2e8f0;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .accordion-custom .accordion-button {
+        font-size: 1.1rem;
+        padding: 1.25rem 1.25rem;
+    }
+    
+    .accordion-icon-wrapper {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .accordion-icon-wrapper i {
+        font-size: 1.1rem;
+    }
+    
+    .accordion-custom .accordion-body {
+        padding: 1.5rem 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .accordion-custom .accordion-button {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+    }
+    
+    .accordion-title {
+        font-size: 0.95rem;
+    }
 }

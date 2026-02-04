@@ -11,7 +11,7 @@ function App() {
 			<div className="cabecera">
 				<Cabecera></Cabecera>
 			</div>
-			<div id="detalles" className="container py-5">
+			<div id="detalles" className="container-fuid py-5">
 				<Detalles></Detalles>
 			</div>
 		</div>
