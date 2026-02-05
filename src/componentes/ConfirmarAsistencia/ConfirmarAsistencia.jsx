@@ -1,5 +1,5 @@
 import './ConfirmarAsistencia.css'
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const ConfirmarAsistencia = () => {
     const [form, setForm] = useState({
@@ -18,6 +18,27 @@ const ConfirmarAsistencia = () => {
         });
     };
 
+    useEffect(() => {
+        if (tituloRef.current) {
+            tituloRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    }, []);
+
+    const tituloRef = useRef(null)
+    const cerrarAcordeon = () => {
+        const collapse = document.getElementById("collapseConfirmar");
+        if (collapse) {
+            const bsCollapse =
+                window.bootstrap.Collapse.getInstance(collapse) ||
+                new window.bootstrap.Collapse(collapse);
+            bsCollapse.hide();
+        }
+    };
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setEnviando(true);
@@ -31,7 +52,7 @@ const ConfirmarAsistencia = () => {
                 },
                 body: JSON.stringify(form)
             });
-            
+
             // Simular delay para mostrar el loading
             setTimeout(() => {
                 setEnviando(false);
@@ -57,7 +78,7 @@ const ConfirmarAsistencia = () => {
                                         <div className="icon-wrapper mb-3">
                                             <i className="bi bi-envelope-heart-fill"></i>
                                         </div>
-                                        <h2 className="fw-bold mb-2">Confirmar asistencia</h2>
+                                        <h2 ref={tituloRef} className="fw-bold mb-2">Confirmar asistencia</h2>
                                         <p className="text-muted">
                                             Por favor, completa el formulario para confirmar tu asistencia
                                         </p>
@@ -88,8 +109,8 @@ const ConfirmarAsistencia = () => {
                                                 <i className="bi bi-check-circle-fill me-2"></i>
                                                 ¿Asistirás?
                                             </label>
-                                            <select 
-                                                name="asistencia" 
+                                            <select
+                                                name="asistencia"
                                                 className="form-select form-select-lg"
                                                 value={form.asistencia}
                                                 onChange={handleChange}
@@ -135,8 +156,8 @@ const ConfirmarAsistencia = () => {
                                         </div>
 
                                         {/* Botón de envío */}
-                                        <button 
-                                            type="submit" 
+                                        <button
+                                            type="submit"
                                             className="btn btn-primary btn-lg w-100 py-3"
                                             disabled={enviando}
                                         >
@@ -169,13 +190,20 @@ const ConfirmarAsistencia = () => {
                                             ¡Confirmación Recibida!
                                         </h3>
                                         <p className="lead mb-4">
-                                            Gracias por confirmar tu asistencia. 
+                                            Gracias por confirmar tu asistencia.
                                             ¡Nos vemos en la celebración! 💙
                                         </p>
                                         <div className="alert alert-success border-0 mb-0">
                                             <i className="bi bi-info-circle-fill me-2"></i>
                                             Hemos recibido tu confirmación correctamente
                                         </div>
+                                        <button
+                                            className="btn btn-outline-primary mt-4"
+                                            onClick={cerrarAcordeon}
+                                        >
+                                            <i className="bi bi-chevron-up me-2"></i>
+                                            Cerrar
+                                        </button>
                                     </div>
                                 </div>
                             </div>

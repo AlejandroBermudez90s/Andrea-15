@@ -7,40 +7,38 @@ import { useEffect } from "react"
 
 const Detalles = () => {
     useEffect(() => {
-        // Obtener todos los botones del acordeón
-        const accordionButtons = document.querySelectorAll('.accordion-button');
-        
-        accordionButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Solo hacer scroll si el acordeón está colapsado (se va a abrir)
-                if (this.classList.contains('collapsed')) {
-                    // Pequeño delay para que la animación de apertura comience
-                    setTimeout(() => {
-                        // Obtener el elemento del acordeón
-                        const accordionItem = this.closest('.accordion-item');
-                        
-                        // Calcular la posición con un offset para que no quede pegado arriba
-                        const offset = 100; // Espacio desde la parte superior
-                        const elementPosition = accordionItem.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - offset;
-                        
-                        // Hacer scroll suave
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }, 100);
-                }
-            });
-        });
-        
-        // Cleanup: remover los event listeners cuando el componente se desmonte
-        return () => {
-            accordionButtons.forEach(button => {
-                button.removeEventListener('click', () => {});
-            });
-        };
-    }, []);
+    const accordion = document.getElementById("accordionDetalles");
+    if (!accordion) return;
+
+    const handleClick = (e) => {
+        const button = e.target.closest(".accordion-button");
+        if (!button) return;
+
+        // Solo si se va a abrir
+        if (button.classList.contains("collapsed")) {
+            setTimeout(() => {
+                const accordionItem = button.closest(".accordion-item");
+                if (!accordionItem) return;
+
+                const offset = 100;
+                const elementPosition = accordionItem.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }, 150);
+        }
+    };
+
+    accordion.addEventListener("click", handleClick);
+
+    return () => {
+        accordion.removeEventListener("click", handleClick);
+    };
+}, []);
+
 
     return (
         <div className="detalles-section">
