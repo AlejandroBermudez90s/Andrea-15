@@ -7,7 +7,6 @@ import Detalles from './componentes/Detalles/Detalles'
 function App() {
 	return (
 		<div className="container-fluid p-0 m-0 fondo">
-			{/* Remove the duplicate flex classes - let CSS handle it */}
 			<div className="cabecera">
 				<Cabecera></Cabecera>
 			</div>

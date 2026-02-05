@@ -3,8 +3,45 @@ import Ubicacion from "../Ubicacion/Ubicacion"
 import './Detalles.css'
 import DressCode from "../DressCode/DressCode"
 import ConfirmarAsistencia from "../ConfirmarAsistencia/ConfirmarAsistencia"
+import { useEffect } from "react"
 
 const Detalles = () => {
+    useEffect(() => {
+        // Obtener todos los botones del acordeón
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Solo hacer scroll si el acordeón está colapsado (se va a abrir)
+                if (this.classList.contains('collapsed')) {
+                    // Pequeño delay para que la animación de apertura comience
+                    setTimeout(() => {
+                        // Obtener el elemento del acordeón
+                        const accordionItem = this.closest('.accordion-item');
+                        
+                        // Calcular la posición con un offset para que no quede pegado arriba
+                        const offset = 100; // Espacio desde la parte superior
+                        const elementPosition = accordionItem.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - offset;
+                        
+                        // Hacer scroll suave
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            });
+        });
+        
+        // Cleanup: remover los event listeners cuando el componente se desmonte
+        return () => {
+            accordionButtons.forEach(button => {
+                button.removeEventListener('click', () => {});
+            });
+        };
+    }, []);
+
     return (
         <div className="detalles-section">
             <div className="container-fluid py-5">
@@ -106,6 +143,8 @@ const Detalles = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Confirmar Asistencia */}
                             <div className="accordion-item mb-4">
                                 <h2 className="accordion-header">
                                     <button
