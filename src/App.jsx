@@ -6,6 +6,7 @@ import Detalles from './componentes/Detalles/Detalles'
 import Atrapado from './componentes/Atrapado/Atrapado'
 import SeguirBajando from './componentes/SeguirBajando/SeguirBajando'
 import Dinero from './componentes/Dinero/Dinero'
+import Footer from './componentes/Footer/Footer'
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
 			</div>
 			<div id="dinero" className="container-fuid py-5">
 				<Dinero></Dinero>
+			</div>
+			<div className="container-fuid py-5">
+				<Footer></Footer>
 			</div>
 		</div>
 	);
