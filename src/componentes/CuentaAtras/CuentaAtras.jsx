@@ -64,7 +64,7 @@ const CuentaAtras = () => {
     }
 
     return (
-        <div className="row g-4">
+        <div className="fuente row g-4">
             {/* Cuenta Atrás */}
             <div className="col-12 col-lg-6">
                 <div className="card countdown-card h-100">

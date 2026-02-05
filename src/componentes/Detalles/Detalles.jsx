@@ -7,37 +7,37 @@ import { useEffect } from "react"
 
 const Detalles = () => {
     useEffect(() => {
-    const accordion = document.getElementById("accordionDetalles");
-    if (!accordion) return;
+        const accordion = document.getElementById("accordionDetalles");
+        if (!accordion) return;
 
-    const handleClick = (e) => {
-        const button = e.target.closest(".accordion-button");
-        if (!button) return;
+        const handleClick = (e) => {
+            const button = e.target.closest(".accordion-button");
+            if (!button) return;
 
-        // Solo si se va a abrir
-        if (button.classList.contains("collapsed")) {
-            setTimeout(() => {
-                const accordionItem = button.closest(".accordion-item");
-                if (!accordionItem) return;
+            // Solo si se va a abrir
+            if (button.classList.contains("collapsed")) {
+                setTimeout(() => {
+                    const accordionItem = button.closest(".accordion-item");
+                    if (!accordionItem) return;
 
-                const offset = 100;
-                const elementPosition = accordionItem.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    const offset = 100;
+                    const elementPosition = accordionItem.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }, 150);
-        }
-    };
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }, 150);
+            }
+        };
 
-    accordion.addEventListener("click", handleClick);
+        accordion.addEventListener("click", handleClick);
 
-    return () => {
-        accordion.removeEventListener("click", handleClick);
-    };
-}, []);
+        return () => {
+            accordion.removeEventListener("click", handleClick);
+        };
+    }, []);
 
 
     return (

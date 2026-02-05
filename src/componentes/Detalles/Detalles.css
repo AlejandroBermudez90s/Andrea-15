@@ -134,6 +134,32 @@
         font-size: 2rem;
     }
 
+    .fuente {
+        font-family: "Prata", serif;
+        font-size: 1.2em !important;
+        color: #bbbaba;
+        text-align: center;
+        line-height: 2;
+        /* Mucho espacio entre líneas = más lujo */
+        letter-spacing: 1.5px;
+        /* Separa un poco las letras */
+        text-transform: none;
+        /* Mantén minúsculas para que sea más joven */
+    }
+
+    .fuenteParrafo {
+        font-family: "Prata", serif;
+        font-size: 0.6em !important;
+        color: #f3f1f1;
+        text-align: center;
+        line-height: 2;
+        /* Mucho espacio entre líneas = más lujo */
+        letter-spacing: 0em;
+        /* Separa un poco las letras */
+        text-transform: none;
+        /* Mantén minúsculas para que sea más joven */
+    }
+
     .accordion-custom .accordion-button {
         font-size: 1.05rem;
         padding: 1.2rem;
@@ -147,5 +173,31 @@
 
     .accordion-title {
         font-size: 0.95rem;
+    }
+
+    .fuente {
+        font-family: "Prata", serif;
+        font-size: 1em;
+        color: #e0e0e0;
+        text-align: center;
+        line-height: 2;
+        /* Mucho espacio entre líneas = más lujo */
+        letter-spacing: 1.5px;
+        /* Separa un poco las letras */
+        text-transform: none;
+        /* Mantén minúsculas para que sea más joven */
+    }
+
+    .fuenteParrafo {
+        font-family: "Prata", serif;
+        font-size: 0.6em;
+        color: #f3f1f1;
+        text-align: center;
+        line-height: 2;
+        /* Mucho espacio entre líneas = más lujo */
+        letter-spacing: 1.5px;
+        /* Separa un poco las letras */
+        text-transform: none;
+        /* Mantén minúsculas para que sea más joven */
     }
 }

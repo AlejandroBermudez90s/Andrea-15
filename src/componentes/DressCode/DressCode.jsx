@@ -70,7 +70,7 @@ const DressCode = () => {
                                 </div>
                             </div>
                             
-                            <h3 className="fw-bold mb-3" style={{color: '#C084FC'}}>Mujer</h3>
+                            <h3 className="fw-bold mb-3" style={{color: '#8a5cb8ff'}}>Guapas</h3>
                             <p className="text-muted small fst-italic mb-0">Elegancia y sofisticación</p>
                         </div>
                     </div>
@@ -87,24 +87,24 @@ const DressCode = () => {
                                     <svg viewBox="0 0 200 280" className="suit-svg">
                                         {/* Traje */}
                                         <path d="M100,50 L75,70 L70,150 L70,280 L95,280 L95,150 L100,120 L105,150 L105,280 L130,280 L130,150 L125,70 Z" 
-                                              fill="url(#gradient-men)" stroke="#3B82F6" strokeWidth="2"/>
+                                              fill="url(#gradient-men)" stroke="#041024ff" strokeWidth="2"/>
                                         {/* Corbata */}
-                                        <path d="M100,50 L95,120 L100,140 L105,120 Z" fill="#1E40AF"/>
+                                        <path d="M100,50 L95,120 L100,140 L105,120 Z" fill="#050e2eff"/>
                                         {/* Cuello */}
-                                        <path d="M85,55 L100,50 L115,55" stroke="#3B82F6" strokeWidth="3" fill="none"/>
-                                        <circle cx="100" cy="48" r="6" fill="#3B82F6"/>
+                                        <path d="M85,55 L100,50 L115,55" stroke="#05152eff" strokeWidth="3" fill="none"/>
+                                        <circle cx="100" cy="48" r="6" fill="#0c2144ff"/>
                                         
                                         <defs>
                                             <linearGradient id="gradient-men" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                <stop offset="0%" style={{stopColor: '#60A5FA', stopOpacity: 1}} />
-                                                <stop offset="100%" style={{stopColor: '#3B82F6', stopOpacity: 1}} />
+                                                <stop offset="0%" style={{stopColor: '#bbc4d1ff', stopOpacity: 1}} />
+                                                <stop offset="100%" style={{stopColor: '#030f22ff', stopOpacity: 1}} />
                                             </linearGradient>
                                         </defs>
                                     </svg>
                                 </div>
                             </div>
                             
-                            <h3 className="fw-bold mb-3" style={{color: '#3B82F6'}}>Hombre</h3>
+                            <h3 className="fw-bold mb-3" style={{color: '#1a3d79ff'}}>Guapos</h3>
                             <p className="text-muted small fst-italic mb-0">Formalidad y distinción</p>
                         </div>
                     </div>

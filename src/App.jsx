@@ -3,6 +3,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Cabecera from './componentes/Cabecera/Cabecera'
 import Detalles from './componentes/Detalles/Detalles'
+import Atrapado from './componentes/Atrapado/Atrapado'
+import SeguirBajando from './componentes/SeguirBajando/SeguirBajando'
+import Dinero from './componentes/Dinero/Dinero'
+
 
 function App() {
 	return (
@@ -12,6 +16,15 @@ function App() {
 			</div>
 			<div id="detalles" className="container-fuid py-5">
 				<Detalles></Detalles>
+			</div>
+			<div className="container-fuid py-5">
+				<SeguirBajando></SeguirBajando>
+			</div>
+			<div id="atrapado" className="container-fuid py-5">
+				<Atrapado></Atrapado>
+			</div>
+			<div id="dinero" className="container-fuid py-5">
+				<Dinero></Dinero>
 			</div>
 		</div>
 	);
