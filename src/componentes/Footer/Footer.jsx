@@ -21,7 +21,7 @@ const Footer = () => {
 
                 {/* Tarjeta de Autor Minimalista */}
                 <div className="author-card">
-                    <p>Autor de la página: <strong>Ale</strong></p>
+                    <p>Hecho por: <strong>Alejandro Bermúdez</strong></p>
                 </div>
             </div>
         </footer>
