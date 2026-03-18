@@ -13,7 +13,9 @@ function App() {
 			<div className="cabecera">
 				<Cabecera></Cabecera>
 			</div>
+			<div id="detalles" className="container-fuid">
 				<Detalles></Detalles>
+			</div>
 				<SeguirBajando></SeguirBajando>
 				<Atrapado></Atrapado>
 				<Dinero></Dinero>
