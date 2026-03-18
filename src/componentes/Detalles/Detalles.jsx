@@ -3,49 +3,68 @@ import Ubicacion from "../Ubicacion/Ubicacion"
 import './Detalles.css'
 import DressCode from "../DressCode/DressCode"
 import ConfirmarAsistencia from "../ConfirmarAsistencia/ConfirmarAsistencia"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react" // <-- Añadimos useRef
 
 const Detalles = () => {
+    // Referencia al contenedor principal del acordeón
+    const accordionRef = useRef(null);
+
     useEffect(() => {
-        const accordion = document.getElementById("accordionDetalles");
-        if (!accordion) return;
+        const accordionElement = accordionRef.current;
+        if (!accordionElement) return;
 
-        const handleClick = (e) => {
-            const button = e.target.closest(".accordion-button");
-            if (!button) return;
+        // Cambiamos 'shown' (al terminar) por 'show' (al empezar el clic)
+        const handleShow = (e) => {
+            const accordionItem = e.target.closest('.accordion-item');
+            if (!accordionItem) return;
 
-            // Solo si se va a abrir
-            if (button.classList.contains("collapsed")) {
-                setTimeout(() => {
-                    const accordionItem = button.closest(".accordion-item");
-                    if (!accordionItem) return;
-
-                    const offset = 100;
-                    const elementPosition = accordionItem.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }, 150);
+            // 1. Obtenemos todos los items para saber el orden
+            const allItems = Array.from(accordionElement.querySelectorAll('.accordion-item'));
+            const targetIndex = allItems.indexOf(accordionItem);
+            
+            let heightToSubtract = 0;
+            
+            // 2. Revisamos si hay algún acordeón abierto por ENCIMA del que acabamos de hacer clic
+            for (let i = 0; i < targetIndex; i++) {
+                const openCollapse = allItems[i].querySelector('.accordion-collapse.show');
+                if (openCollapse) {
+                    // Si está arriba y se va a cerrar, obtenemos su altura para restarla
+                    heightToSubtract = openCollapse.getBoundingClientRect().height;
+                    break;
+                }
             }
+
+            const offset = 100; // Ajuste para el margen superior
+            
+            // 3. Calculamos la posición actual y le restamos la altura del que va a desaparecer
+            const elementPosition = accordionItem.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - offset - heightToSubtract;
+
+            // 4. Hacemos el scroll INMEDIATAMENTE
+            // Usamos un pequeño setTimeout (10ms) solo para que el navegador procese el clic antes de mover
+            setTimeout(() => {
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 1200);
         };
 
-        accordion.addEventListener("click", handleClick);
+        // Escuchamos el evento 'show' (cuando arranca) en lugar de 'shown' (cuando termina)
+        accordionElement.addEventListener('show.bs.collapse', handleShow);
 
+        // Cleanup
         return () => {
-            accordion.removeEventListener("click", handleClick);
+            accordionElement.removeEventListener('show.bs.collapse', handleShow);
         };
     }, []);
-
 
     return (
         <div className="detalles-section">
             <div className="container-fluid py-5">
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-10 col-lg-9">
-                        {/* Título principal mejorado */}
+                        
                         <div className="text-center mb-5 section-header">
                             <div className="decorative-line mb-3"></div>
                             <h2 className="display-4 fw-bold text-white mb-3 fuente">
@@ -57,7 +76,9 @@ const Detalles = () => {
                             <div className="decorative-line"></div>
                         </div>
 
-                        <div className="accordion accordion-custom" id="accordionDetalles">
+                        {/* AÑADIMOS LA REFERENCIA AQUÍ */}
+                        <div className="accordion accordion-custom" id="accordionDetalles" ref={accordionRef}>
+                            
                             {/* Cuenta Atrás */}
                             <div className="accordion-item mb-4">
                                 <h2 className="accordion-header">

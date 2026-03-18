@@ -1,5 +1,5 @@
 /* ============================================
-   SECCIÓN DE DETALLES – AZUL CLARO ELEGANTE
+    SECCIÓN DE DETALLES – AZUL CLARO ELEGANTE
    ============================================ */
 .fuente {
     font-family: "Prata", serif;
@@ -19,7 +19,7 @@
     text-align: center;
     line-height: 2;
     /* Mucho espacio entre líneas = más lujo */
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     /* Separa un poco las letras */
     text-transform: none;
     /* Mantén minúsculas para que sea más joven */
@@ -54,7 +54,7 @@
 }
 
 /* ============================================
-   ACORDEÓN SIMPLIFICADO
+    ACORDEÓN SIMPLIFICADO
    ============================================ */
 
 .accordion-custom .accordion-item {
@@ -62,7 +62,7 @@
     border-radius: 16px;
     border: none;
     margin-bottom: 1.25rem;
-    transition: transform 1s ease;
+    transition: transform 0.4s ease !important;
 }
 
 .accordion-custom .accordion-item:hover {
@@ -78,7 +78,7 @@
     padding: 1.4rem 1.6rem;
     border-radius: 16px;
     box-shadow: none;
-    transition: background-color 1s ease;
+    transition: background-color 0.3s ease !important;
 }
 
 .accordion-custom .accordion-button:not(.collapsed) {
@@ -86,10 +86,10 @@
     color: #ffffff;
 }
 
-/* Flecha */
+/* Flecha - Animación más lenta */
 .accordion-custom .accordion-button::after {
     filter: brightness(3);
-    transition: transform 1s ease;
+    transition: transform 0.8s ease !important; /* Rotación más lenta */
 }
 
 .accordion-custom .accordion-button:not(.collapsed)::after {
@@ -105,6 +105,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease;
 }
 
 .accordion-icon-wrapper i {
@@ -126,7 +127,23 @@
 }
 
 /* ============================================
-   RESPONSIVE
+    ANIMACIÓN MÁS LENTA DEL ACORDEÓN
+   ============================================ */
+
+/* Sobrescribir la animación de Bootstrap para hacerla MÁS LENTA */
+.accordion-custom .accordion-collapse {
+    transition: height 1.2s ease-in-out !important; /* 1.2 segundos - MUY LENTA */
+}
+
+/* Alternativa aún más lenta si lo prefieres */
+/* 
+.accordion-custom .accordion-collapse {
+    transition: height 2s ease-in-out !important;
+}
+*/
+
+/* ============================================
+    RESPONSIVE
    ============================================ */
 
 @media (max-width: 768px) {
@@ -149,7 +166,7 @@
 
     .fuenteParrafo {
         font-family: "Prata", serif;
-        font-size: 0.6em !important;
+        font-size: 0.7em !important;
         color: #f3f1f1;
         text-align: center;
         line-height: 2;
@@ -163,6 +180,11 @@
     .accordion-custom .accordion-button {
         font-size: 1.05rem;
         padding: 1.2rem;
+    }
+    
+    /* Animación más rápida en móvil para mejor UX */
+    .accordion-custom .accordion-collapse {
+        transition: height 1s ease-in-out !important;
     }
 }
 
