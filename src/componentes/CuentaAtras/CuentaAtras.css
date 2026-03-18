@@ -99,8 +99,8 @@
     background-color: #f3f5fb;
     color: #2c3563;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    position: relative; /* IMPORTANTE: para que la estrella se posicione respecto a la casilla */
-    overflow: visible; /* IMPORTANTE: permite que la estrella salga de los límites */
+    position: relative;
+    overflow: visible;
 }
 
 .calendar-day:not(.empty):hover {
@@ -128,21 +128,22 @@
     font-size: 1.05rem;
     box-shadow: 0 10px 25px rgba(28, 45, 107, 0.4);
     position: relative;
-    overflow: visible; /* Permite que la estrella salga de los límites */
+    overflow: visible;
 }
 
 /* Estrella FUERA de la casilla - arriba a la derecha */
 .event-marker {
     position: absolute;
-    top: -8px;       /* Valor NEGATIVO para que salga por arriba */
-    right: -8px;     /* Valor NEGATIVO para que salga por la derecha */
+    top: -8px;
+    right: -8px;
     font-size: 1.2rem;
     opacity: 1;
-    color: #ffd700;  /* Dorado para que destaque */
+    color: #ffd700;
     text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
-    z-index: 10;     /* Por encima de todo */
+    z-index: 10;
     animation: twinkle 2s ease-in-out infinite;
 }
+
 
 /* Animación MUY sutil del día */
 .calendar-day.event-day {
@@ -159,7 +160,7 @@
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE - AJUSTES PARA MÓVIL
    ============================================ */
 
 @media (max-width: 768px) {
@@ -168,17 +169,32 @@
     }
 
     .calendar-day {
-        font-size: 0.8rem;
+        font-size: 0.75rem; /* Más pequeño en tablets */
+        border-radius: 8px;
+    }
+    
+    .calendar-day.event-day {
+        font-size: 0.85rem;
+    }
+    
+    .calendar-weekdays {
+        font-size: 0.65rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .calendar-grid {
+        gap: 0.4rem; /* Menos espacio entre días */
     }
     
     .event-marker {
-        font-size: 1rem;
+        font-size: 0.9rem;
         top: -6px;
         right: -6px;
     }
 }
 
 @media (max-width: 576px) {
+    /* Countdown */
     .countdown-item {
         padding: 1.3rem;
     }
@@ -187,9 +203,65 @@
         font-size: 1.9rem;
     }
     
+    /* Calendario más compacto en móviles pequeños */
+    .calendar-card .card-body {
+        padding: 1rem !important;
+    }
+    
+    .calendar-weekdays {
+        font-size: 0.6rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.4rem;
+    }
+    
+    .calendar-grid {
+        gap: 0.3rem; /* Aún menos espacio */
+    }
+    
+    .calendar-day {
+        font-size: 0.7rem; /* Números más pequeños */
+        border-radius: 6px;
+    }
+    
+    .calendar-day.event-day {
+        font-size: 0.8rem;
+    }
+    
     .event-marker {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         top: -5px;
         right: -5px;
+    }
+    
+    /* Badge más compacto */
+    .calendar-card .badge {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 0.8rem !important;
+    }
+}
+
+/* Para móviles MUY pequeños (< 360px) */
+@media (max-width: 360px) {
+    .calendar-grid {
+        gap: 0.25rem;
+    }
+    
+    .calendar-day {
+        font-size: 0.65rem;
+        border-radius: 5px;
+    }
+    
+    .calendar-day.event-day {
+        font-size: 0.75rem;
+    }
+    
+    .calendar-weekdays {
+        font-size: 0.55rem;
+    }
+    
+    .event-marker {
+        font-size: 0.65rem;
+        top: -4px;
+        right: -4px;
     }
 }
