@@ -5,11 +5,12 @@ import Atrapado from './componentes/Atrapado/Atrapado'
 import SeguirBajando from './componentes/SeguirBajando/SeguirBajando'
 import Dinero from './componentes/Dinero/Dinero'
 import Footer from './componentes/Footer/Footer'
-
+import Audio from './componentes/Audio/Audio'
 
 function App() {
 	return (
 		<div className="container-fluid p-0 m-0 fondo">
+			<Audio></Audio>
 			<div className="cabecera">
 				<Cabecera></Cabecera>
 			</div>
