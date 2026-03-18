@@ -51,7 +51,7 @@ const Audio = () => {
             loop
             preload="auto"
         >
-            <source src="/public/tiempo_de_vals.mp3" type="audio/mpeg" />
+            <source src="/src/assets/tiempo_de_vals.mp3" type="audio/mpeg" />
         </audio>
     )
 }
