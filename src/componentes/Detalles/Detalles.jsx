@@ -47,7 +47,7 @@ const Detalles = () => {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
-            }, 1200);
+            }, 100);
         };
 
         // Escuchamos el evento 'show' (cuando arranca) en lugar de 'shown' (cuando termina)
