@@ -135,12 +135,6 @@
     transition: height 1.2s ease-in-out !important; /* 1.2 segundos - MUY LENTA */
 }
 
-/* Alternativa aún más lenta si lo prefieres */
-/* 
-.accordion-custom .accordion-collapse {
-    transition: height 2s ease-in-out !important;
-}
-*/
 
 /* ============================================
     RESPONSIVE
