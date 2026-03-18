@@ -10,6 +10,7 @@ const CuentaAtras = () => {
     })
 
     // Fecha del evento: 16 de mayo de 2026
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const eventDate = new Date('2026-05-16T19:00:00')
 
     useEffect(() => {
