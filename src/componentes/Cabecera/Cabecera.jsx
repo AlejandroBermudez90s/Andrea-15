@@ -3,7 +3,7 @@ import './Cabecera.css'
 const Cabecera = () => {
 
 	return (
-		<>
+		<div className="cabecera">
 			<div className="texto">
 				<h1 className="andrea">Andrea</h1>
 				
@@ -14,7 +14,7 @@ const Cabecera = () => {
 					Ver detalles
 				</a>
 			</div>
-		</>
+		</div>
 	)
 }
 
