@@ -1,10 +1,18 @@
+.texto{
+	margin-bottom: 12em;
+}
+
+.boton{
+	margin-top: 28em;
+}
+
 .cabecera {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(0, 23, 61) !important;
 
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-		url('/src/assets/portada.webp');
+		url('/src/assets/portada.jfif');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -33,6 +41,7 @@
 	font-weight: 400;
 	font-style: normal;
 	font-size: 3.5em !important;
+	margin-top: 0em;
 }
 
 .btn-outline-light {
@@ -61,14 +70,14 @@
 		font-family: "Pinyon Script", cursive;
 		font-weight: 400;
 		font-style: normal;
-		font-size: 7.5em !important;
+		font-size: 6em !important;
 	}
 
 	.andrea2 {
 		font-family: "Pinyon Script";
 		font-weight: 400;
 		font-style: normal;
-		font-size: 2.5em !important;
+		font-size: 3em !important;
 	}
 }
 
