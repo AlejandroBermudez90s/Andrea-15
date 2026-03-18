@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import './CuentaAtras.css'
 
 const CuentaAtras = () => {
@@ -9,9 +9,9 @@ const CuentaAtras = () => {
         seconds: 0
     })
 
-    // Fecha del evento: 16 de mayo de 2026
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const eventDate = new Date('2026-05-16T19:00:00')
+    // Fecha del evento: 16 de mayo de 2026 a las 19:00
+    // useMemo evita que se recree en cada render
+    const eventDate = useMemo(() => new Date('2026-05-16T19:00:00'), [])
 
     useEffect(() => {
         const calculateTimeLeft = () => {

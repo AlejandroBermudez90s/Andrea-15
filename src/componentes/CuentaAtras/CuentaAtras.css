@@ -99,6 +99,8 @@
     background-color: #f3f5fb;
     color: #2c3563;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* IMPORTANTE: para que la estrella se posicione respecto a la casilla */
+    overflow: visible; /* IMPORTANTE: permite que la estrella salga de los límites */
 }
 
 .calendar-day:not(.empty):hover {
@@ -111,7 +113,7 @@
 }
 
 /* ============================================
-   DÍA DEL EVENTO – PROTAGONISTA PERO FINO
+    DÍA DEL EVENTO – PROTAGONISTA PERO FINO
    ============================================ */
 
 .calendar-day.event-day {
@@ -126,19 +128,25 @@
     font-size: 1.05rem;
     box-shadow: 0 10px 25px rgba(28, 45, 107, 0.4);
     position: relative;
+    overflow: visible; /* Permite que la estrella salga de los límites */
 }
 
+/* Estrella FUERA de la casilla - arriba a la derecha */
 .event-marker {
     position: absolute;
-    top: 4px;
-    right: 6px;
-    font-size: 0.65rem;
-    opacity: 0.9;
+    top: -8px;       /* Valor NEGATIVO para que salga por arriba */
+    right: -8px;     /* Valor NEGATIVO para que salga por la derecha */
+    font-size: 1.2rem;
+    opacity: 1;
+    color: #ffd700;  /* Dorado para que destaque */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    z-index: 10;     /* Por encima de todo */
+    animation: twinkle 2s ease-in-out infinite;
 }
 
-/* Animación MUY sutil */
+/* Animación MUY sutil del día */
 .calendar-day.event-day {
-    animation: softPulse 3.5s ease-in-out infinite;
+    animation: softPulse 2.5s ease-in-out infinite;
 }
 
 @keyframes softPulse {
@@ -146,7 +154,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.03);
+        transform: scale(1.10);
     }
 }
 
@@ -162,6 +170,12 @@
     .calendar-day {
         font-size: 0.8rem;
     }
+    
+    .event-marker {
+        font-size: 1rem;
+        top: -6px;
+        right: -6px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -171,5 +185,11 @@
 
     .countdown-number {
         font-size: 1.9rem;
+    }
+    
+    .event-marker {
+        font-size: 0.85rem;
+        top: -5px;
+        right: -5px;
     }
 }
