@@ -57,11 +57,11 @@ const ConfirmarAsistencia = () => {
             setTimeout(() => {
                 setEnviando(false);
                 setEnviado(true);
-            }, 500);
+            }, 100);
         } catch (error) {
             console.error("Error al enviar:", error);
             setEnviando(false);
-            setEnviado(true); // Cambiar a true de todas formas para testing
+            // setEnviado(true); // Cambiar a true de todas formas para testing
         }
     };
 
