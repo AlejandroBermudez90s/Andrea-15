@@ -23,12 +23,6 @@ body,
     height: 100vh !important;
 }
 
-/* Ensure container-fluid has no padding */
-.container-fluid {
-	padding: 0 !important;
-	margin: 0 !important;
-}
-
 .fondo {
-	background-color: aliceblue;
+	background-color: rgb(11, 47, 107)
 }

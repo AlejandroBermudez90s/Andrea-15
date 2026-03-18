@@ -13,21 +13,11 @@ function App() {
 			<div className="cabecera">
 				<Cabecera></Cabecera>
 			</div>
-			<div id="detalles" className="container-fuid py-5">
 				<Detalles></Detalles>
-			</div>
-			<div className="container-fuid py-5">
 				<SeguirBajando></SeguirBajando>
-			</div>
-			<div id="atrapado" className="container-fuid py-5">
 				<Atrapado></Atrapado>
-			</div>
-			<div id="dinero" className="container-fuid py-5">
 				<Dinero></Dinero>
-			</div>
-			<div className="container-fuid py-5">
 				<Footer></Footer>
-			</div>
 		</div>
 	);
 }
