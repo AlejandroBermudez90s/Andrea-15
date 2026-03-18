@@ -31,7 +31,7 @@ const CuentaAtras = () => {
         const timer = setInterval(calculateTimeLeft, 1000)
 
         return () => clearInterval(timer)
-    }, [])
+    }, [eventDate])
 
     // Generar calendario de mayo 2026
     const generateCalendar = () => {
