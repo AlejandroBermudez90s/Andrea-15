@@ -211,19 +211,20 @@
     }
 
     .texto {
-        margin-top: 3vh;
+        margin-top: 2vh;
     }
 
     .boton {
-        margin-bottom: 8vh;
+        margin-bottom: 4vh;
     }
 
     .andrea {
-        font-size: 15vw;
+        font-size: 20vw;
     }
 
     .andrea2 {
-        font-size: 10vw;
+        font-size: 12vw;
+				margin-top: 120vw;
     }
 }
 
@@ -243,7 +244,7 @@
     }
 
     .boton {
-        margin-bottom: 8vh;
+        margin-bottom: 4vh;
     }
 
     .andrea {
@@ -252,25 +253,27 @@
 
     .andrea2 {
         font-size: 12vw;
+				margin-top: 150vw;
     }
 }
 
 /* Tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
     .texto {
-        margin-top: 30vh;
+        margin-top: 2vh;
     }
 
     .boton {
-        margin-bottom: 15vh;
+        margin-bottom: 5vh;
     }
 
     .andrea {
-        font-size: 12vw;
+        font-size: 16vw;
     }
 
     .andrea2 {
-        font-size: 4vw;
+        font-size: 10vw;
+				margin-top: 90vw;
     }
 }
 
@@ -323,7 +326,7 @@
 }
 
 /* ============================================
-   SEGURIDAD ANTI-OVERFLOW
+  SEGURIDAD ANTI-OVERFLOW
    ============================================ */
 
 .andrea,
@@ -331,4 +334,35 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+}
+
+
+/* Estilo para el icono de la flecha */
+.bi-chevron-down {
+    color: #ffffff;             /* Blanco puro */
+    font-size: 1.5rem;          /* Tamaño elegante, ni muy grande ni muy pequeño */
+    display: inline-block;      /* Necesario para que la animación funcione bien */
+    font-weight: 100 !important; /* Intentamos forzar que sea fina */
+    
+    /* Aplicamos la animación suave */
+    animation: flotarSuave 3s ease-in-out infinite;
+    
+    /* Un ligero resplandor para que no se pierda en fondos oscuros */
+    filter: drop-shadow(0 0 5px rgba(2, 1, 104, 0.3));
+}
+
+/* Definición de la animación "Flotar" */
+@keyframes flotarSuave {
+    0% {
+        transform: translateY(0);
+        opacity: 0.6; /* Un poco transparente al inicio */
+    }
+    50% {
+        transform: translateY(5px); /* Baja suavemente */
+        opacity: 1;    /* Se ilumina al bajar */
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.6; /* Vuelve a subir y atenuarse */
+    }
 }

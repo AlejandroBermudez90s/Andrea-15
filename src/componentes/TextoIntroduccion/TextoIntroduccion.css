@@ -1,0 +1,183 @@
+.fuente {
+    font-family: "Prata", serif;
+    color: #e0e0e0;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    text-transform: none;
+}
+
+.fuenteParrafo {
+    font-family: "Prata", serif;
+    font-size: 1rem; /* CORREGIDO: era 20em */
+    color: #f3f1f1;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1px;
+    text-transform: none;
+}
+
+.detalles-section {
+    background: linear-gradient(180deg,
+            #0b306d 0%,
+            #081033 50%,
+            #264c79 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header */
+.section-header h2 {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.section-header p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Líneas decorativas */
+.decorative-line {
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    margin: 0.5em auto 0;
+    border-radius: 2px;
+}
+
+/* Botón */
+.boton {
+    margin-top: 2rem;
+}
+
+.btn-outline-light {
+    transition: all 0.4s ease;
+    border-width: 2px;
+    color: white !important;
+    border-color: white !important;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2) !important;
+    border-color: white !important;
+}
+
+/* ============================================
+    RESPONSIVE
+   ============================================ */
+
+/* Móviles pequeños */
+@media (max-width: 576px) {
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .fuente {
+        font-size: 1em;
+        letter-spacing: 1.5px;
+    }
+
+    .fuenteParrafo {
+        font-size: 0.8em;
+        padding: 0 1em;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+    }
+
+    .decorative-line {
+        width: 50px;
+        height: 2px;
+        margin-top: 0.3em;
+    }
+}
+
+/* Móviles normales */
+@media (min-width: 577px) and (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .fuente {
+        font-size: 1.1em;
+        letter-spacing: 1.5px;
+    }
+
+    .fuenteParrafo {
+        font-size: 0.85em;
+        padding: 0 1.5em;
+        line-height: 1.9;
+    }
+
+    .decorative-line {
+        width: 60px;
+        height: 2px;
+        margin-top: 0.4em;
+    }
+}
+
+/* Tablets y dispositivos como Samsung Galaxy S20+ (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .fuente {
+        font-size: 1.2em;
+        letter-spacing: 1.5px;
+    }
+
+    .fuenteParrafo {
+        font-size: 0.95em; /* Tamaño específico para dispositivos como S20+ */
+        padding: 0 2em;
+        line-height: 1.95;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .decorative-line {
+        width: 70px;
+        height: 3px;
+        margin-top: 0.5em;
+    }
+}
+
+/* Tablets grandes y laptops pequeñas */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-header h2 {
+        font-size: 3rem;
+    }
+
+    .fuente {
+        font-size: 1.3em;
+    }
+
+    .fuenteParrafo {
+        font-size: 1em;
+        padding: 0 2.5em;
+        line-height: 2;
+        max-width: 85%;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1441px) {
+    .section-header h2 {
+        font-size: 3.5rem;
+    }
+
+    .fuente {
+        font-size: 1.4em;
+    }
+
+    .fuenteParrafo {
+        font-size: 1.1em;
+        padding: 0 3em;
+        line-height: 2;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
