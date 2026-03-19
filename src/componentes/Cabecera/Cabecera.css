@@ -1,5 +1,5 @@
 /* ============================================
-   CABECERA - HERO SECTION
+    CABECERA - HERO SECTION
    ============================================ */
 
 .cabecera {
@@ -45,7 +45,7 @@
 }
 
 /* ============================================
-  INTRO OVERLAY - MARIPOSA
+    INTRO OVERLAY - MARIPOSA
    ============================================ */
 
 .intro-overlay {
@@ -117,7 +117,7 @@
 }
 
 /* ============================================
-  CONTENIDO PRINCIPAL - TRANSICIÓN ELEGANTE
+    CONTENIDO PRINCIPAL - TRANSICIÓN ELEGANTE
    ============================================ */
 
 .main-content {
@@ -144,12 +144,8 @@
     margin-top: 30vh;
 }
 
-.boton {
-    margin-bottom: 15vh;
-}
-
 /* ============================================
-  TIPOGRAFÍA RESPONSIVE CON VW
+    TIPOGRAFÍA RESPONSIVE CON VW
    ============================================ */
 
 .andrea {
@@ -167,18 +163,17 @@
     font-weight: 400;
     font-style: normal;
     font-size: 5vw;
-    margin: 0 0 1rem 0;
     line-height: 1.2;
     max-width: 95vw;
 }
 
 /* ============================================
-  BOTÓN
+    BOTÓN
    ============================================ */
 
 .btn-outline-light {
     transition: all 0.4s ease;
-    border-width: 2px;
+    border-width: 0px;
     color: white !important;
     border-color: white !important;
 }
@@ -196,7 +191,7 @@
 }
 
 /* ============================================
-  RESPONSIVE
+    RESPONSIVE
    ============================================ */
 
 /* Móviles pequeños */
@@ -214,17 +209,23 @@
         margin-top: 2vh;
     }
 
+
     .boton {
-        margin-bottom: 4vh;
+        margin-bottom: 1vh;
+        margin-top: 0px !important;
     }
 
     .andrea {
-        font-size: 20vw;
+        font-size: 16vw;
+        margin-top: 1rem;
     }
 
     .andrea2 {
+        position: absolute;
         font-size: 12vw;
-				margin-top: 120vw;
+        margin-left: 2.5em !important;
+		margin-top: 35rem;
+        margin-bottom: 0px !important;
     }
 }
 
@@ -244,7 +245,8 @@
     }
 
     .boton {
-        margin-bottom: 4vh;
+        margin-bottom: 2vh;
+        margin-top: 0px !important;
     }
 
     .andrea {
@@ -252,13 +254,22 @@
     }
 
     .andrea2 {
+        position: absolute;
         font-size: 12vw;
-				margin-top: 150vw;
+        margin-left: 2.5em !important;
+		margin-top: 85vh;
+        margin-bottom: 0px !important;
     }
 }
 
 /* Tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
+
+    .butterfly {
+        width: 10em;
+        height: 10em;
+    }
+
     .texto {
         margin-top: 2vh;
     }
@@ -280,9 +291,10 @@
 /* Desktops pequeños */
 @media (min-width: 1025px) and (max-width: 1440px) {
     .butterfly {
-        width: 180px;
-        height: 180px;
+        width: 10em;
+        height: 10em;
     }
+
 
     .texto {
         margin-top: 32vh;
@@ -304,8 +316,8 @@
 /* Desktops grandes */
 @media (min-width: 1441px) {
     .butterfly {
-        width: 200px;
-        height: 200px;
+        width: 10em;
+        height: 10em;
     }
 
     .texto {
@@ -324,18 +336,6 @@
         font-size: 4rem;
     }
 }
-
-/* ============================================
-  SEGURIDAD ANTI-OVERFLOW
-   ============================================ */
-
-.andrea,
-.andrea2 {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-}
-
 
 /* Estilo para el icono de la flecha */
 .bi-chevron-down {

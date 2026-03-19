@@ -28,10 +28,10 @@ const Cabecera = () => {
                 <div className="texto">
                     <h1 className="andrea">Andrea</h1>
                 </div>
-								<h2 className="andrea2">15 Años</h2>
+				<h2 className="andrea2">15 Años</h2>
                 <div className='boton'>
                     <a href="#textoIntroduccion" className="btn shadow-sm">
-                        <i className="bi bi-chevron-down mt-2"></i>
+                        <i className="bi bi-chevron-down"></i>
                     </a>
                 </div>
             </div>

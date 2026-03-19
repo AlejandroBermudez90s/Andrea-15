@@ -1,4 +1,5 @@
 html {
 	background-color: rgb(201, 209, 223) !important;
+	scroll-behavior: smooth;
 }
 

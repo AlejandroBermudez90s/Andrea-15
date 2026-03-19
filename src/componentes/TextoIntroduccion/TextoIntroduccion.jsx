@@ -1,6 +1,25 @@
 import './TextoIntroduccion.css'
+import { useEffect } from 'react';
 
-const Detalles = () => {
+const TextoIntroduccion = () => {
+
+useEffect(() => {
+    const elementos = document.querySelectorAll('.animar');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    elementos.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="detalles-section">
@@ -9,31 +28,27 @@ const Detalles = () => {
           <div className="col-12 col-md-10 col-lg-9">
             <div className="text-center mb-5 section-header">
               <div className="decorative-line mb-3"></div>
-              <h2 className="display-4 fw-bold text-white mb-3 fuente">
+              <h2 className="display-4 fw-bold text-white mb-3 fuente animar">
                 Título
               </h2>
-              <p className="lead text-white-80 mb-3 fuenteParrafo">
+              <p className="lead text-white-80 mb-5 fuenteParrafo animar delay-1">
                 "Hay momentos en la vida que marcan el corazón para siempre…
                 Muy pronto viviré uno de los días más importantes de mi vida,
                 dejando atrás mi niñez para comenzar una nueva etapa.
               </p>
-              <p className="lead text-white-80 mb-3 fuenteParrafo">
-                Quiero celebrarlo rodeada de las personas que más quiero,
-                será un honor que me acompañes en este día tan especial.
-              </p>
-              <p className="lead text-white-80 fuenteParrafo">
-                Tu presencia es el mejor regalo que puedo recibir en esta 
-                celebración única, donde brindaremos por la alegría de vivir 
+              <p className="lead text-white-80 fuenteParrafo animar delay-2">
+                Tu presencia es el mejor regalo que puedo recibir en esta
+                celebración única, donde brindaremos por la alegría de vivir
                 y los hermosos recuerdos que aún están por venir."
               </p>
-              <p className="lead text-white-60 mb-3 fuenteParrafo">
-                Andrea
+              <p className="lead text-white-60 mb-3 fuenteParrafo firma animar delay-3">
+                Andrea.
               </p>
-              <div className='boton'>
-                    <a href="#detalles" className="btn btn-outline-light btn-sm px-3 shadow-lg">
-                        Ver detalles
-                    </a>
-                </div>
+              <div className='boton animar'>
+                <a href="#detalles" className="btn btn-outline-light btn-sm px-3 shadow-lg">
+                  Ver detalles
+                </a>
+              </div>
               <div className="decorative-line"></div>
             </div>
           </div>
@@ -43,4 +58,4 @@ const Detalles = () => {
   )
 }
 
-export default Detalles
+export default TextoIntroduccion
