@@ -15,7 +15,7 @@ const Cabecera = () => {
                 <div className="intro-overlay">
                     <p className="intro-text">Toca las mariposas</p>
                     <img 
-                        src="/src/assets/mariposas_gif.gif" 
+                        src="/mariposas_gif.gif" 
                         alt="Mariposa" 
                         className="butterfly"
                         onClick={handleButterflyClick}
