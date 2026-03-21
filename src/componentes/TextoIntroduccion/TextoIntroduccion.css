@@ -1,3 +1,7 @@
+/* ============================================
+   TIPOGRAFÍAS COMPARTIDAS
+   ============================================ */
+
 .fuente {
     font-family: "Prata", serif !important;
     color: #e0e0e0;
@@ -9,20 +13,17 @@
 
 .fuenteParrafo {
     font-family: "Prata", serif !important;
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     color: #f3f1f1 !important;
     text-align: center;
-    line-height: 2 !important;
-    letter-spacing: 1px !important;
+    line-height: 1.9 !important;
+    letter-spacing: 0.5px !important;
     text-transform: none;
-}
-
-.lead.fuenteParrafo {
-    font-size: 1rem !important;
+    font-weight: 300;
 }
 
 /* ============================================
-   SECCIÓN TEXTO INTRODUCCIÓN - FLEXBOX LIMPIO
+   SECCIÓN TEXTO INTRODUCCIÓN - ELEGANTE
    ============================================ */
 
 .texto-introduccion-section {
@@ -36,67 +37,161 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 5vh 0;
-}
-
-.texto-introduccion-section .container-fluid {
-    width: 100%;
-    max-width: 100%;
+    padding: 8vh 0;
+    height: 100svh;
 }
 
 .texto-introduccion-section .section-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 2.5rem;
+}
+
+/* ============================================
+   ORNAMENTOS DECORATIVOS
+   ============================================ */
+
+.ornamento-superior,
+.ornamento-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
 }
 
-/* Header */
-.texto-introduccion-section .section-header h2 {
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.linea-decorativa {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+}
+
+.corazon-icono {
+    color: rgba(255, 255, 255, 0.815);
+    font-size: 0.9rem;
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ============================================
+   CONTENEDOR POÉTICO
+   ============================================ */
+
+.poema-container {
+    border: none;
     margin: 0;
+    padding: 3rem 2rem;
+    position: relative;
 }
 
-.texto-introduccion-section .section-header p {
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0;
+.poema-container::before,
+.poema-container::after {
+    content: '"';
+    font-family: "Pinyon Script", cursive;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    line-height: 1;
 }
 
-/* Líneas decorativas */
-.texto-introduccion-section .decorative-line {
-    width: 70px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #ffffff, transparent);
-    margin: 0;
-    border-radius: 2px;
+.poema-container::before {
+    top: 0.5em;
+    left: 0;
 }
 
-/* Firma */
-.texto-introduccion-section .firma {
+.poema-container::after {
+    bottom: 6.5rem;
+    right: 0.8em;
+    content: '"';
+}
+
+/* ============================================
+   VERSOS - ESTILO POÉTICO
+   ============================================ */
+
+.verso {
+    margin: 0.8rem 0;
     font-style: italic;
-    margin-top: 1rem !important;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Botón */
-.texto-introduccion-section .boton {
+.separador-verso {
+    margin: 2rem 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    letter-spacing: 0.8rem;
+}
+
+/* ============================================
+   FIRMA ELEGANTE
+   ============================================ */
+
+.firma-elegante {
     margin-top: 2rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border: none;
 }
 
-.texto-introduccion-section .btn-outline-light {
+.firma-elegante cite {
+    font-family: "Pinyon Script", cursive !important;
+    font-size: 2rem;
+    font-style: normal;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.firma-elegante cite::before {
+    content: '~';
+    margin-right: 0.5rem;
+    opacity: 0.6;
+}
+
+/* ============================================
+   BOTÓN ELEGANTE
+   ============================================ */
+
+.boton-container {
+    margin-top: 1rem;
+}
+
+.btn-elegante {
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    color: white !important;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
     transition: all 0.4s ease;
-    border-width: 2px;
-    color: white !important;
-    border-color: white !important;
+    backdrop-filter: blur(10px);
 }
 
-.texto-introduccion-section .btn-outline-light:hover {
-    background-color: rgba(255, 255, 255, 0.2) !important;
+.btn-elegante:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
     color: white !important;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2) !important;
-    border-color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15) !important;
+}
+
+.btn-elegante i {
+    transition: transform 0.3s ease;
+}
+
+.btn-elegante:hover i {
+    transform: translateY(3px);
 }
 
 /* ============================================
@@ -105,8 +200,8 @@
 
 .animar {
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s ease;
+    transform: translateY(30px);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animar.visible {
@@ -114,203 +209,142 @@
     transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.3s; }
-.delay-2 { transition-delay: 0.6s; }
-.delay-3 { transition-delay: 0.9s; }
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+.delay-4 { transition-delay: 0.8s; }
+.delay-5 { transition-delay: 1s; }
+.delay-6 { transition-delay: 1.2s; }
+.delay-7 { transition-delay: 1.4s; }
+.delay-8 { transition-delay: 1.6s; }
 
 /* ============================================
    RESPONSIVE
    ============================================ */
 
-/* Móviles muy pequeños (iPhone SE, etc) */
+/* Móviles muy pequeños */
 @media (max-width: 380px) {
     .texto-introduccion-section {
-        padding: 3vh 0;
+        padding: 5vh 0;
     }
 
-    .texto-introduccion-section .section-header {
+    .poema-container {
+        padding: 2rem 1rem;
+    }
+
+    .poema-container::before,
+    .poema-container::after {
+        font-size: 3rem;
+    }
+
+    .verso {
+        font-size: 0.85rem !important;
+        line-height: 1.6 !important;
+        margin: 0.6rem 0;
+    }
+
+    .separador-verso {
+        font-size: 1rem;
+        letter-spacing: 0.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .firma-elegante cite {
+        font-size: 1.5rem;
+    }
+
+    .ornamento-superior,
+    .ornamento-inferior {
+        max-width: 250px;
         gap: 1rem;
     }
 
-    .texto-introduccion-section .section-header h2 {
-        font-size: 1.5rem !important;
+    .corazon-icono {
+        font-size: 0.7rem;
     }
 
-    .fuente {
-        font-size: 0.9em !important;
-    }
-
-    .fuenteParrafo,
-    .lead.fuenteParrafo {
-        font-size: 0.85rem !important;
-        line-height: 1.6 !important;
-        padding: 0 1rem !important;
-        letter-spacing: 0.3px !important;
-    }
-
-    .texto-introduccion-section .firma {
-        margin-top: 0.5rem !important;
-    }
-
-    .texto-introduccion-section .boton {
-        margin-top: 1.5rem !important;
-    }
-
-    .texto-introduccion-section .decorative-line {
-        width: 40px;
-        height: 2px;
+    .btn-elegante {
+        font-size: 0.85rem;
+        padding: 0.5rem 1.5rem;
     }
 }
 
 /* Móviles pequeños */
 @media (min-width: 381px) and (max-width: 576px) {
     .texto-introduccion-section {
-        padding: 4vh 0;
+        padding: 6vh 0;
     }
 
-    .texto-introduccion-section .section-header {
-        gap: 1.25rem;
+    .poema-container {
+        padding: 2.5rem 1.5rem;
     }
 
-    .texto-introduccion-section .section-header h2 {
-        font-size: 1.75rem !important;
-    }
-
-    .fuente {
+    .verso {
         font-size: 1em !important;
-    }
-
-    .fuenteParrafo,
-    .lead.fuenteParrafo {
-        font-size: 0.9rem !important;
-        padding: 0 1.5rem !important;
         line-height: 1.7 !important;
-        letter-spacing: 0.5px !important;
     }
 
-    .texto-introduccion-section .firma {
-        margin-top: 0.75rem !important;
+    .separador-verso {
+        margin: 1.8rem 0;
     }
 
-    .texto-introduccion-section .boton {
-        margin-top: 1.75rem !important;
+    .firma-elegante cite {
+        font-size: 1.5rem;
     }
 
-    .texto-introduccion-section .decorative-line {
-        width: 50px;
-        height: 2px;
+    .btn-elegante {
+        font-size: 0.9rem;
     }
 }
 
-/* Móviles normales (incluye Redmi Note 12 Pro 5G) */
+/* Móviles normales */
 @media (min-width: 577px) and (max-width: 768px) {
-    .texto-introduccion-section {
-        padding: 5vh 0;
-    }
-
-    .texto-introduccion-section .section-header {
-        gap: 1.5rem;
-    }
-
-    .texto-introduccion-section .section-header h2 {
-        font-size: 2rem !important;
-    }
-
-    .fuente {
-        font-size: 1.1em !important;
-    }
-
-    .fuenteParrafo,
-    .lead.fuenteParrafo {
-        font-size: 0.95rem !important;
-        padding: 0 2rem !important;
+    .verso {
+        font-size: 1rem !important;
         line-height: 1.8 !important;
     }
 
-    .texto-introduccion-section .firma {
-        margin-top: 1rem !important;
-    }
-
-    .texto-introduccion-section .boton {
-        margin-top: 2rem !important;
-    }
-
-    .texto-introduccion-section .decorative-line {
-        width: 60px;
-        height: 2px;
+    .firma-elegante cite {
+        font-size: 1.5rem;
     }
 }
 
-/* Tablets (769px - 1024px) */
+/* Tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .texto-introduccion-section .section-header {
-        gap: 2rem;
+    .verso {
+        font-size: 1.05rem !important;
     }
 
-    .texto-introduccion-section .section-header h2 {
-        font-size: 2.5rem !important;
+    .poema-container {
+        padding: 3.5rem 3rem;
     }
 
-    .fuente {
-        font-size: 1.2em !important;
-    }
-
-    .fuenteParrafo,
-    .lead.fuenteParrafo {
-        font-size: 1rem !important;
-        padding: 0 3rem !important;
-        line-height: 1.9 !important;
-        max-width: 90%;
-    }
-
-    .texto-introduccion-section .decorative-line {
-        width: 70px;
-        height: 3px;
+    .firma-elegante cite {
+        font-size: 2.2rem;
     }
 }
 
-/* Laptops pequeñas */
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .texto-introduccion-section .section-header {
-        gap: 2.5rem;
-    }
-
-    .texto-introduccion-section .section-header h2 {
-        font-size: 3rem !important;
-    }
-
-    .fuente {
-        font-size: 1.3em !important;
-    }
-
-    .fuenteParrafo,
-    .lead.fuenteParrafo {
-        font-size: 1.1rem !important;
-        padding: 0 4rem !important;
+/* Laptops y Desktop */
+@media (min-width: 1025px) {
+    .verso {
+        font-size: 1.15rem !important;
         line-height: 2 !important;
-        max-width: 85%;
-    }
-}
-
-/* Desktop grande */
-@media (min-width: 1441px) {
-    .texto-introduccion-section .section-header {
-        gap: 3rem;
     }
 
-    .texto-introduccion-section .section-header h2 {
-        font-size: 3.5rem !important;
+    .poema-container {
+        padding: 4rem 4rem;
     }
 
-    .fuente {
-        font-size: 1.4em !important;
+    .poema-container::before,
+    .poema-container::after {
+        font-size: 5rem;
     }
 
-    .fuenteParrafo,
-    .lead.fuenteParrafo {
-        font-size: 1.2rem !important;
-        padding: 0 5rem !important;
-        line-height: 2 !important;
-        max-width: 80%;
+    .firma-elegante cite {
+        font-size: 2.5rem;
+    }
+
+    .separador-verso {
+        margin: 2.5rem 0;
     }
 }

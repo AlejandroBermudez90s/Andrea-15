@@ -25,28 +25,66 @@ const TextoIntroduccion = () => {
     <div className="texto-introduccion-section">
       <div className="container-fluid py-5">
         <div className="row justify-content-center">
-          <div className="col-12 col-md-10 col-lg-9">
-            <div className="text-center mb-5 section-header">
-              <div className="decorative-line mb-3"></div>
-              <p className="lead text-white-80 mb-5 fuenteParrafo animar delay-1">
-                "Hay momentos en la vida que marcan el corazón para siempre…
-                Muy pronto viviré uno de los días más importantes de mi vida,
-                dejando atrás mi niñez para comenzar una nueva etapa.
-              </p>
-              <p className="lead text-white-80 fuenteParrafo animar delay-2">
-                Tu presencia es el mejor regalo que puedo recibir en esta
-                celebración única, donde brindaremos por la alegría de vivir
-                y los hermosos recuerdos que aún están por venir."
-              </p>
-              <p className="lead text-white-60 mb-3 fuenteParrafo firma animar delay-3">
-                Andrea.
-              </p>
-              <div className='boton animar'>
-                <a href="#detalles" className="btn btn-outline-light btn-sm px-3 shadow-lg">
-                  Ver detalles
+          <div className="col-12 col-md-8 col-lg-7">
+            {/* Contenedor de poema elegante */}
+            <div className="text-center section-header">
+              
+              {/* Ornamento superior */}
+              <div className="ornamento-superior animar">
+                <div className="linea-decorativa"></div>
+                <i className="bi bi-heart-fill corazon-icono"></i>
+                <div className="linea-decorativa"></div>
+              </div>
+
+              {/* Texto poético con espaciado elegante */}
+              <blockquote className="poema-container">
+                <p className="verso fuenteParrafo animar delay-1">
+                  Hay momentos en la vida que marcan el corazón para siempre…
+                </p>
+                
+                <p className="verso fuenteParrafo animar delay-2">
+                  Muy pronto viviré uno de los días más importantes de mi vida,
+                </p>
+                
+                <p className="verso fuenteParrafo animar delay-2">
+                  dejando atrás mi niñez para comenzar una nueva etapa.
+                </p>
+
+                <div className="separador-verso animar delay-3">• • •</div>
+
+                <p className="verso fuenteParrafo animar delay-4">
+                  Tu presencia es el mejor regalo que puedo recibir
+                </p>
+                
+                <p className="verso fuenteParrafo animar delay-4">
+                  en esta celebración única, donde brindaremos
+                </p>
+                
+                <p className="verso fuenteParrafo animar delay-5">
+                  por la alegría de vivir y los hermosos recuerdos
+                </p>
+                
+                <p className="verso fuenteParrafo animar delay-5">
+                  que aún están por venir.
+                </p>
+
+                {/* Firma elegante */}
+                <footer className="blockquote-footer firma-elegante animar delay-6">
+                  <cite className='cita' title="Andrea">Andrea</cite>
+                </footer>
+              </blockquote>
+
+              {/* Ornamento inferior con botón */}
+              <div className="ornamento-inferior animar delay-7">
+                <div className="linea-decorativa"></div>
+              </div>
+
+              <div className='boton-container animar delay-8'>
+                <a href="#detalles" className="btn btn-outline-light btn-elegante px-4 py-2">
+                  <span>Ver detalles de la celebración</span>
                 </a>
               </div>
-              <div className="decorative-line"></div>
+
             </div>
           </div>
         </div>
