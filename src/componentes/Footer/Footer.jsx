@@ -42,7 +42,7 @@ const Footer = () => {
                 {/* Firma profesional */}
                 <div className="professional-badge">
                     <i className="bi bi-code-slash"></i>
-                    <span>InvitAle</span>
+                    <span className='firmado'>InvitAle</span>
                 </div>
             </div>
         </footer>

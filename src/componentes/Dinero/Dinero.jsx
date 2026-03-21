@@ -3,7 +3,7 @@ import './Dinero.css';
 
 const Dinero = () => {
     const [copiado, setCopiado] = useState(false);
-    const alias = "1234 5678 9101"; // <--- Cambia esto por tu Alias real
+    const alias = "ES72 0182 1086 6902 0162 8165"; // <--- Cambia esto por tu Alias real
 
     const copiarAlias = () => {
         navigator.clipboard.writeText(alias);
