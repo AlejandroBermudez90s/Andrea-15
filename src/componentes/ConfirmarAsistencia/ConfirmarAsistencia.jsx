@@ -5,7 +5,7 @@ const ConfirmarAsistencia = () => {
     const [form, setForm] = useState({
         nombre: "",
         asistencia: "Sí",
-        acompanantes: 0,
+        acompanantes: "",
         comentarios: ""
     });
     const [enviado, setEnviado] = useState(false);
@@ -111,7 +111,7 @@ const ConfirmarAsistencia = () => {
                                             </label>
                                             <select
                                                 name="asistencia"
-                                                className="form-select form-select-lg"
+                                                className="form-select form-select-md"
                                                 value={form.asistencia}
                                                 onChange={handleChange}
                                             >
@@ -129,10 +129,10 @@ const ConfirmarAsistencia = () => {
                                             <input
                                                 type="number"
                                                 name="acompanantes"
-                                                className="form-control form-control-lg"
+                                                className="form-control form-control-md"
                                                 min="0"
                                                 max="10"
-                                                placeholder="Ejemplo: 3"
+                                                placeholder="Ejemplo: 4"
                                                 value={form.acompanantes}
                                                 onChange={handleChange}
                                             />
