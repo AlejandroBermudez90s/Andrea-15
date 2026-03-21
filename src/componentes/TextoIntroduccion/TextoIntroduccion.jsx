@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 const TextoIntroduccion = () => {
 
-useEffect(() => {
+  useEffect(() => {
     const elementos = document.querySelectorAll('.animar');
 
     const observer = new IntersectionObserver((entries) => {
@@ -22,7 +22,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="detalles-section">
+    <div className="texto-introduccion-section">
       <div className="container-fluid py-5">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-9">

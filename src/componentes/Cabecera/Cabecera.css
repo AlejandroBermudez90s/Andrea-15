@@ -47,7 +47,7 @@
    INTRO OVERLAY - MARIPOSA
    ============================================ */
 
-.intro-overlay {
+.cabecera .intro-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -70,7 +70,7 @@
     }
 }
 
-.intro-text {
+.cabecera .intro-text {
     font-family: "Pinyon Script", cursive;
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 1);
@@ -91,7 +91,7 @@
     }
 }
 
-.butterfly {
+.cabecera .butterfly {
     width: 150px;
     height: 150px;
     cursor: pointer;
@@ -100,7 +100,7 @@
     transition: transform 0.3s ease;
 }
 
-.butterfly:hover {
+.cabecera .butterfly:hover {
     transform: scale(1.15);
 }
 
@@ -117,14 +117,14 @@
    CONTENIDO PRINCIPAL - FLEXBOX LIMPIO
    ============================================ */
 
-.main-content {
+.cabecera .main-content {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10vh 5vw; /* Padding seguro */
+    padding: 10vh 5vw;
     opacity: 0;
     transform: translateY(40px);
     pointer-events: none;
@@ -134,14 +134,14 @@
     box-sizing: border-box;
 }
 
-.main-content.visible {
+.cabecera .main-content.visible {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
 }
 
 /* Contenedor del nombre - centrado */
-.texto {
+.cabecera .texto {
     flex: 1;
     display: flex;
     align-items: center;
@@ -149,7 +149,7 @@
 }
 
 /* Contenedor del botón - abajo */
-.boton {
+.cabecera .boton {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -161,7 +161,7 @@
    TIPOGRAFÍA RESPONSIVE
    ============================================ */
 
-.andrea {
+.cabecera .andrea {
     font-family: "Pinyon Script", cursive;
     font-weight: 400;
     font-style: normal;
@@ -171,7 +171,7 @@
     max-width: 95vw;
 }
 
-.andrea2 {
+.cabecera .andrea2 {
     font-family: "Pinyon Script";
     font-weight: 400;
     font-style: normal;
@@ -185,25 +185,26 @@
    BOTÓN
    ============================================ */
 
-.btn {
+.cabecera .btn {
     transition: all 0.4s ease;
     border-width: 0px;
     background: transparent;
     color: white !important;
+    padding: 0.5rem;
 }
 
-.btn:hover {
+.cabecera .btn:hover {
     transform: translateY(-3px);
 }
 
-.btn:active {
+.cabecera .btn:active {
     transform: translateY(-1px);
 }
 
 /* Icono de flecha */
-.bi-chevron-down {
+.cabecera .bi-chevron-down {
     color: #ffffff;
-    font-size: 8vw !important;
+    font-size: 2rem;
     display: inline-block;
     animation: flotarSuave 2s ease-in-out infinite;
     filter: drop-shadow(0 0 5px rgba(2, 1, 104, 0.3));
@@ -230,112 +231,111 @@
 
 /* Móviles pequeños y medianos (incluye Redmi Note 12 Pro 5G) */
 @media (max-width: 768px) {
-    .main-content {
-        padding: 8vh 3vw 5vh; /* Menos padding arriba y abajo */
+    .cabecera .main-content {
+        padding: 8vh 3vw 5vh;
     }
 
-    .intro-text {
+    .cabecera .intro-text {
         font-size: 2rem;
     }
 
-    .butterfly {
+    .cabecera .butterfly {
         width: 120px;
         height: 120px;
     }
 
-    .andrea {
-        font-size: 20vw;
-        margin-top: -70vh !important;
+    .cabecera .andrea {
+        font-size: 18vw;
+        margin-top: -70svh !important;
     }
 
-    .andrea2 {
+    .cabecera .andrea2 {
         font-size: 13vw;
         margin: 1rem 0;
-        margin-bottom: -20vh !important;
     }
 
-    .bi-chevron-down {
+    .cabecera .bi-chevron-down {
         font-size: 1.8rem;
     }
 }
 
 /* Móviles muy pequeños */
 @media (max-width: 375px) {
-    .main-content {
+    .cabecera .main-content {
         padding: 5vh 2vw 3vh;
     }
 
-    .intro-text {
+    .cabecera .intro-text {
         font-size: 1.75rem;
         margin-bottom: 2rem;
     }
 
-    .butterfly {
+    .cabecera .butterfly {
         width: 100px;
         height: 100px;
     }
 
-    .andrea {
+    .cabecera .andrea {
         font-size: 20vw;
     }
 
-    .andrea2 {
+    .cabecera .andrea2 {
         font-size: 10vw;
     }
 
-    .bi-chevron-down {
+    .cabecera .bi-chevron-down {
         font-size: 1.5rem;
     }
 }
 
 /* Tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .main-content {
+    .cabecera .main-content {
         padding: 10vh 5vw;
     }
 
-    .butterfly {
+    .cabecera .butterfly {
         width: 150px;
         height: 150px;
     }
 
-    .andrea {
+    .cabecera .andrea {
         font-size: 14vw;
     }
 
-    .andrea2 {
+    .cabecera .andrea2 {
         font-size: 6vw;
     }
 }
 
 /* Desktops pequeños */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .butterfly {
+    .cabecera .butterfly {
         width: 180px;
         height: 180px;
     }
 
-    .andrea {
+    .cabecera .andrea {
         font-size: 10vw;
     }
 
-    .andrea2 {
+    .cabecera .andrea2 {
         font-size: 3.5vw;
     }
 }
 
 /* Desktops grandes */
 @media (min-width: 1441px) {
-    .butterfly {
+    .cabecera .butterfly {
         width: 200px;
         height: 200px;
     }
 
-    .andrea {
+    .cabecera .andrea {
         font-size: 12rem;
     }
 
-    .andrea2 {
+    .cabecera .andrea2 {
         font-size: 4rem;
     }
 }

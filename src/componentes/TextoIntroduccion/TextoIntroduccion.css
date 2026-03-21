@@ -22,10 +22,10 @@
 }
 
 /* ============================================
-   SECCIÓN - FLEXBOX LIMPIO
+   SECCIÓN TEXTO INTRODUCCIÓN - FLEXBOX LIMPIO
    ============================================ */
 
-.detalles-section {
+.texto-introduccion-section {
     background: linear-gradient(180deg,
             #0b306d 0%,
             #081033 50%,
@@ -36,36 +36,36 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 5vh 0; /* Padding vertical seguro */
+    padding: 5vh 0;
 }
 
-.container-fluid {
+.texto-introduccion-section .container-fluid {
     width: 100%;
     max-width: 100%;
 }
 
-.section-header {
+.texto-introduccion-section .section-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem; /* Espaciado consistente entre elementos */
+    gap: 1.5rem;
 }
 
 /* Header */
-.section-header h2 {
+.texto-introduccion-section .section-header h2 {
     color: #ffffff;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     margin: 0;
 }
 
-.section-header p {
+.texto-introduccion-section .section-header p {
     color: rgba(255, 255, 255, 0.85);
     margin: 0;
 }
 
 /* Líneas decorativas */
-.decorative-line {
+.texto-introduccion-section .decorative-line {
     width: 70px;
     height: 3px;
     background: linear-gradient(90deg, transparent, #ffffff, transparent);
@@ -74,24 +74,24 @@
 }
 
 /* Firma */
-.firma {
+.texto-introduccion-section .firma {
     font-style: italic;
     margin-top: 1rem !important;
 }
 
 /* Botón */
-.boton {
-    margin-top: 2rem !important; /* Espaciado relativo, no absoluto */
+.texto-introduccion-section .boton {
+    margin-top: 2rem !important;
 }
 
-.btn-outline-light {
+.texto-introduccion-section .btn-outline-light {
     transition: all 0.4s ease;
     border-width: 2px;
     color: white !important;
     border-color: white !important;
 }
 
-.btn-outline-light:hover {
+.texto-introduccion-section .btn-outline-light:hover {
     background-color: rgba(255, 255, 255, 0.2) !important;
     color: white !important;
     transform: translateY(-3px);
@@ -124,15 +124,15 @@
 
 /* Móviles muy pequeños (iPhone SE, etc) */
 @media (max-width: 380px) {
-    .detalles-section {
+    .texto-introduccion-section {
         padding: 3vh 0;
     }
 
-    .section-header {
+    .texto-introduccion-section .section-header {
         gap: 1rem;
     }
 
-    .section-header h2 {
+    .texto-introduccion-section .section-header h2 {
         font-size: 1.5rem !important;
     }
 
@@ -148,15 +148,15 @@
         letter-spacing: 0.3px !important;
     }
 
-    .firma {
+    .texto-introduccion-section .firma {
         margin-top: 0.5rem !important;
     }
 
-    .boton {
+    .texto-introduccion-section .boton {
         margin-top: 1.5rem !important;
     }
 
-    .decorative-line {
+    .texto-introduccion-section .decorative-line {
         width: 40px;
         height: 2px;
     }
@@ -164,15 +164,15 @@
 
 /* Móviles pequeños */
 @media (min-width: 381px) and (max-width: 576px) {
-    .detalles-section {
+    .texto-introduccion-section {
         padding: 4vh 0;
     }
 
-    .section-header {
+    .texto-introduccion-section .section-header {
         gap: 1.25rem;
     }
 
-    .section-header h2 {
+    .texto-introduccion-section .section-header h2 {
         font-size: 1.75rem !important;
     }
 
@@ -188,15 +188,15 @@
         letter-spacing: 0.5px !important;
     }
 
-    .firma {
+    .texto-introduccion-section .firma {
         margin-top: 0.75rem !important;
     }
 
-    .boton {
+    .texto-introduccion-section .boton {
         margin-top: 1.75rem !important;
     }
 
-    .decorative-line {
+    .texto-introduccion-section .decorative-line {
         width: 50px;
         height: 2px;
     }
@@ -204,15 +204,15 @@
 
 /* Móviles normales (incluye Redmi Note 12 Pro 5G) */
 @media (min-width: 577px) and (max-width: 768px) {
-    .detalles-section {
+    .texto-introduccion-section {
         padding: 5vh 0;
     }
 
-    .section-header {
+    .texto-introduccion-section .section-header {
         gap: 1.5rem;
     }
 
-    .section-header h2 {
+    .texto-introduccion-section .section-header h2 {
         font-size: 2rem !important;
     }
 
@@ -227,15 +227,15 @@
         line-height: 1.8 !important;
     }
 
-    .firma {
+    .texto-introduccion-section .firma {
         margin-top: 1rem !important;
     }
 
-    .boton {
+    .texto-introduccion-section .boton {
         margin-top: 2rem !important;
     }
 
-    .decorative-line {
+    .texto-introduccion-section .decorative-line {
         width: 60px;
         height: 2px;
     }
@@ -243,11 +243,11 @@
 
 /* Tablets (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .section-header {
+    .texto-introduccion-section .section-header {
         gap: 2rem;
     }
 
-    .section-header h2 {
+    .texto-introduccion-section .section-header h2 {
         font-size: 2.5rem !important;
     }
 
@@ -263,7 +263,7 @@
         max-width: 90%;
     }
 
-    .decorative-line {
+    .texto-introduccion-section .decorative-line {
         width: 70px;
         height: 3px;
     }
@@ -271,11 +271,11 @@
 
 /* Laptops pequeñas */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .section-header {
+    .texto-introduccion-section .section-header {
         gap: 2.5rem;
     }
 
-    .section-header h2 {
+    .texto-introduccion-section .section-header h2 {
         font-size: 3rem !important;
     }
 
@@ -294,11 +294,11 @@
 
 /* Desktop grande */
 @media (min-width: 1441px) {
-    .section-header {
+    .texto-introduccion-section .section-header {
         gap: 3rem;
     }
 
-    .section-header h2 {
+    .texto-introduccion-section .section-header h2 {
         font-size: 3.5rem !important;
     }
 
