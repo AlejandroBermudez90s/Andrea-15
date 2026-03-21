@@ -187,18 +187,13 @@ const ConfirmarAsistencia = () => {
                                             </div>
                                         </div>
                                         <h3 className="fw-bold mb-3 text-success">
-                                            ¡Confirmación Recibida!
+                                            ¡Confirmación recibida!
                                         </h3>
                                         <p className="lead mb-4">
                                             Gracias por confirmar tu asistencia.
-                                            ¡Nos vemos en la celebración! 💙
                                         </p>
-                                        <div className="alert alert-success border-0 mb-0">
-                                            <i className="bi bi-info-circle-fill me-2"></i>
-                                            Hemos recibido tu confirmación correctamente
-                                        </div>
                                         <button
-                                            className="btn btn-outline-primary mt-4"
+                                            className="btn btn-outline-primary mt-2"
                                             onClick={cerrarAcordeon}
                                         >
                                             <i className="bi bi-chevron-up me-2"></i>
