@@ -73,16 +73,14 @@ const TextoIntroduccion = () => {
                   <cite className='cita' title="Andrea">Andrea</cite>
                 </footer>
               </blockquote>
-
-              {/* Ornamento inferior con botón */}
-              <div className="ornamento-inferior animar delay-7">
-                <div className="linea-decorativa"></div>
-              </div>
-
               <div className='boton-container animar delay-8'>
                 <a href="#detalles" className="btn btn-outline-light btn-elegante px-4 py-2">
                   <span>Ver detalles de la celebración</span>
                 </a>
+              </div>
+              {/* Ornamento inferior con botón */}
+              <div className="ornamento-inferior animar delay-7">
+                <div className="linea-decorativa"></div>
               </div>
 
             </div>

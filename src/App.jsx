@@ -22,6 +22,7 @@ function App() {
 			<div id="detalles" className="container-fuid">
 				<Detalles></Detalles>
 			</div>
+			{/*
 			<div className="container-fuid">
 				<SeguirBajando></SeguirBajando>
 			</div>
@@ -31,6 +32,7 @@ function App() {
 			<div id="dinero" className="container-fuid">
 				<Dinero></Dinero>
 			</div>
+			*/}
 			<div className="container-fuid">
 				<Footer></Footer>
 			</div>
