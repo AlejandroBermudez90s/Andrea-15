@@ -1,5 +1,5 @@
 /* ============================================
-    CABECERA - HERO SECTION
+   CABECERA - HERO SECTION
    ============================================ */
 
 .cabecera {
@@ -9,7 +9,7 @@
     
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     margin: 0;
@@ -34,18 +34,17 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(30px); /* Blur inicial */
+    filter: blur(30px);
     transition: filter 2s ease-out;
     z-index: 0;
 }
 
-/* Cuando se hace clic - quita el blur */
 .cabecera.focused::before {
     filter: blur(0px);
 }
 
 /* ============================================
-    INTRO OVERLAY - MARIPOSA
+   INTRO OVERLAY - MARIPOSA
    ============================================ */
 
 .intro-overlay {
@@ -71,13 +70,12 @@
     }
 }
 
-/* Texto "Toca la mariposa" - SIN BLUR */
 .intro-text {
     font-family: "Pinyon Script", cursive;
-    font-size: 2.5em !important;
+    font-size: 2.5rem;
     color: rgba(255, 255, 255, 1);
     margin-bottom: 3rem;
-		letter-spacing: 0.2rem;
+    letter-spacing: 0.2rem;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
     animation: pulse 3s ease-in-out infinite;
 }
@@ -93,10 +91,9 @@
     }
 }
 
-/* Mariposa - SIN BLUR - animación de giro lento */
 .butterfly {
-    width: 1em;
-    height: 1em;
+    width: 150px;
+    height: 150px;
     cursor: pointer;
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.6));
     animation: rotateButterfly 20s linear infinite;
@@ -117,7 +114,7 @@
 }
 
 /* ============================================
-    CONTENIDO PRINCIPAL - TRANSICIÓN ELEGANTE
+   CONTENIDO PRINCIPAL - FLEXBOX LIMPIO
    ============================================ */
 
 .main-content {
@@ -126,12 +123,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    padding: 10vh 5vw; /* Padding seguro */
     opacity: 0;
     transform: translateY(40px);
     pointer-events: none;
     transition: opacity 4s ease-out 1s, transform 3s ease-out 1s;
     position: relative;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 .main-content.visible {
@@ -140,12 +140,25 @@
     pointer-events: all;
 }
 
+/* Contenedor del nombre - centrado */
 .texto {
-    margin-top: 30vh;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor del botón - abajo */
+.boton {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* ============================================
-    TIPOGRAFÍA RESPONSIVE CON VW
+   TIPOGRAFÍA RESPONSIVE
    ============================================ */
 
 .andrea {
@@ -163,76 +176,66 @@
     font-weight: 400;
     font-style: normal;
     font-size: 5vw;
+    margin: 0.5rem 0;
     line-height: 1.2;
     max-width: 95vw;
 }
 
 /* ============================================
-    BOTÓN
+   BOTÓN
    ============================================ */
 
-.btn-outline-light {
+.btn {
     transition: all 0.4s ease;
     border-width: 0px;
+    background: transparent;
     color: white !important;
-    border-color: white !important;
 }
 
-.btn-outline-light:hover {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    color: white !important;
+.btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2) !important;
-    border-color: white !important;
 }
 
-.btn-outline-light:active {
+.btn:active {
     transform: translateY(-1px);
 }
 
-/* ============================================
-    RESPONSIVE
-   ============================================ */
+/* Icono de flecha */
+.bi-chevron-down {
+    color: #ffffff;
+    font-size: 8vw !important;
+    display: inline-block;
+    animation: flotarSuave 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(2, 1, 104, 0.3));
+}
 
-/* Móviles pequeños */
-@media (max-width: 375px) {
-    .intro-text {
-        font-size: 2rem;
+@keyframes flotarSuave {
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
     }
-
-    .butterfly {
-        width: 100px;
-        height: 100px;
+    50% {
+        transform: translateY(8px);
+        opacity: 1;
     }
-
-    .texto {
-        margin-top: 2vh;
-    }
-
-
-    .boton {
-        margin-bottom: 1vh;
-        margin-top: 0px !important;
-    }
-
-    .andrea {
-        font-size: 16vw;
-        margin-top: 1rem;
-    }
-
-    .andrea2 {
-        position: absolute;
-        font-size: 12vw;
-        margin-left: 2.5em !important;
-		margin-top: 35rem;
-        margin-bottom: 0px !important;
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
     }
 }
 
-/* Móviles normales */
-@media (min-width: 376px) and (max-width: 768px) {
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Móviles pequeños y medianos (incluye Redmi Note 12 Pro 5G) */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 8vh 3vw 5vh; /* Menos padding arriba y abajo */
+    }
+
     .intro-text {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .butterfly {
@@ -240,68 +243,76 @@
         height: 120px;
     }
 
-    .texto {
-        margin-top: 4vh;
-    }
-
-    .boton {
-        margin-bottom: 2vh;
-        margin-top: 0px !important;
-    }
-
     .andrea {
-        font-size: 16vw;
+        font-size: 20vw;
+        margin-top: -70vh !important;
     }
 
     .andrea2 {
-        position: absolute;
-        font-size: 12vw;
-        margin-left: 2.5em !important;
-		margin-top: 85vh;
-        margin-bottom: 0px !important;
+        font-size: 13vw;
+        margin: 1rem 0;
+        margin-bottom: -20vh !important;
+    }
+
+    .bi-chevron-down {
+        font-size: 1.8rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 375px) {
+    .main-content {
+        padding: 5vh 2vw 3vh;
+    }
+
+    .intro-text {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .butterfly {
+        width: 100px;
+        height: 100px;
+    }
+
+    .andrea {
+        font-size: 20vw;
+    }
+
+    .andrea2 {
+        font-size: 10vw;
+    }
+
+    .bi-chevron-down {
+        font-size: 1.5rem;
     }
 }
 
 /* Tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .main-content {
+        padding: 10vh 5vw;
+    }
 
     .butterfly {
-        width: 10em;
-        height: 10em;
-    }
-
-    .texto {
-        margin-top: 2vh;
-    }
-
-    .boton {
-        margin-bottom: 5vh;
+        width: 150px;
+        height: 150px;
     }
 
     .andrea {
-        font-size: 16vw;
+        font-size: 14vw;
     }
 
     .andrea2 {
-        font-size: 10vw;
-				margin-top: 90vw;
+        font-size: 6vw;
     }
 }
 
 /* Desktops pequeños */
 @media (min-width: 1025px) and (max-width: 1440px) {
     .butterfly {
-        width: 10em;
-        height: 10em;
-    }
-
-
-    .texto {
-        margin-top: 32vh;
-    }
-
-    .boton {
-        margin-bottom: 16vh;
+        width: 180px;
+        height: 180px;
     }
 
     .andrea {
@@ -316,16 +327,8 @@
 /* Desktops grandes */
 @media (min-width: 1441px) {
     .butterfly {
-        width: 10em;
-        height: 10em;
-    }
-
-    .texto {
-        margin-top: 35vh;
-    }
-
-    .boton {
-        margin-bottom: 18vh;
+        width: 200px;
+        height: 200px;
     }
 
     .andrea {
@@ -334,35 +337,5 @@
 
     .andrea2 {
         font-size: 4rem;
-    }
-}
-
-/* Estilo para el icono de la flecha */
-.bi-chevron-down {
-    color: #ffffff;             /* Blanco puro */
-    font-size: 1.5rem;          /* Tamaño elegante, ni muy grande ni muy pequeño */
-    display: inline-block;      /* Necesario para que la animación funcione bien */
-    font-weight: 100 !important; /* Intentamos forzar que sea fina */
-    
-    /* Aplicamos la animación suave */
-    animation: flotarSuave 3s ease-in-out infinite;
-    
-    /* Un ligero resplandor para que no se pierda en fondos oscuros */
-    filter: drop-shadow(0 0 5px rgba(2, 1, 104, 0.3));
-}
-
-/* Definición de la animación "Flotar" */
-@keyframes flotarSuave {
-    0% {
-        transform: translateY(0);
-        opacity: 0.6; /* Un poco transparente al inicio */
-    }
-    50% {
-        transform: translateY(5px); /* Baja suavemente */
-        opacity: 1;    /* Se ilumina al bajar */
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 0.6; /* Vuelve a subir y atenuarse */
     }
 }
