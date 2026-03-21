@@ -13,8 +13,8 @@ const DressCode = () => {
             {/* Color Reservado - Minimalista */}
             <div className="reserved-color-section">
                 <p className="reserved-label">Color Reservado</p>
-                <div className="color-sample" style={{backgroundColor: '#1900ff'}}>
-                    <span className="color-name">Azul Eléctrico</span>
+                <div className="color-sample" style={{backgroundColor: '#0808e7'}}>
+                    <span className="color-name">Azul Rey</span>
                 </div>
                 <p className="reserved-note">Exclusivo para la quinceañera</p>
             </div>
