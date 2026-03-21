@@ -16,9 +16,9 @@
     text-align: center;
     margin-bottom: 3.5rem;
     padding: 2rem 1.5rem;
-    background: rgba(158, 156, 185, 0.493);
+    background: rgba(175, 180, 250, 0.493);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(24, 0, 243, 0);
 }
 
 .reserved-label {

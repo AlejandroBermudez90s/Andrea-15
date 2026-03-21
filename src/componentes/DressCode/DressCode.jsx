@@ -4,7 +4,7 @@ const DressCode = () => {
     return (
         <div className="dresscode-container">
             <div className="text-center mb-5">
-                <h2 className="fw-bold text-primary mb-2">
+                <h2 className="fw-bold text-primary mb-4">
                     <i className="bi bi-stars me-2"></i>
                     Código de vestimenta
                 </h2>
@@ -24,29 +24,24 @@ const DressCode = () => {
                 {/* Ellas */}
                 <div className="dresscode-column">
                     <h3 className="column-title">Ellas</h3>
-                    <ul className="dresscode-list">
-                        <li>Vestido de cóctel o largo</li>
-                        <li>Colores pasteles o tonos joya</li>
-                        <li>Tacones elegantes</li>
-                        <li className="forbidden">× Evitar blanco y azul eléctrico</li>
+                    <ul className="text-center dresscode-list">
+                        <li>Bellas y divinas</li>
                     </ul>
                 </div>
 
                 {/* Ellos */}
                 <div className="dresscode-column">
                     <h3 className="column-title">Ellos</h3>
-                    <ul className="dresscode-list">
-                        <li>Traje completo con corbata</li>
-                        <li>Colores oscuros o neutros</li>
-                        <li>Zapatos de vestir</li>
-                        <li className="forbidden">× No jeans ni tenis</li>
+                    <ul className="text-center dresscode-list">
+                        <li>Guapos y elegantes</li>
                     </ul>
                 </div>
             </div>
 
             {/* Nota final - Sutil */}
             <p className="final-note">
-                La elegancia es la clave
+                <i class="bi bi-info-circle"></i>
+                Obligatorio traer ganas de bailar
             </p>
         </div>
     )
