@@ -28,9 +28,6 @@ const TextoIntroduccion = () => {
           <div className="col-12 col-md-10 col-lg-9">
             <div className="text-center mb-5 section-header">
               <div className="decorative-line mb-3"></div>
-              <h2 className="display-4 fw-bold text-white mb-3 fuente animar">
-                Título
-              </h2>
               <p className="lead text-white-80 mb-5 fuenteParrafo animar delay-1">
                 "Hay momentos en la vida que marcan el corazón para siempre…
                 Muy pronto viviré uno de los días más importantes de mi vida,
